@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import PaintPage from "./components/PaintPage/PaintPage/PaintPage";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
+import PasarelaImagenes from "./components/PasarelaImagenes/PasarelaImagenes";
+import "bootstrap/dist/js/bootstrap.min.js";
+import Group from "./components/Group/Group";
+import Footer from "./components/Footer/Footer";
+import { useState } from "react";
+import InspirationPage from "./pages/Inspiration/Inspiration";
 
 function App() {
+  const [state, setState] = useState(false);
+  const handleState = () => {
+    console.log("holis estoy manejando la pagina nueva");
+    setState(true);
+  };
+
+  if (state === true) {
+    return <InspirationPage />;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <PasarelaImagenes />
+      <Group />
+      <PaintPage state={state} handleState={handleState} />
+      <Footer />
+    </>
   );
 }
 
