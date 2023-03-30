@@ -22,9 +22,5 @@ export const styles = {
     maxHeight: "600px",
     objectFit: "cover",
     verticalAlign: "bottom",
-
-    "@media (max-width: 768px)": {
-      maxHeight: "300px",
-    },
   },
 };

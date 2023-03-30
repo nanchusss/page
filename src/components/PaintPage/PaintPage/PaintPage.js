@@ -20,12 +20,17 @@ import {
 } from "./PaintPage-Styles";
 import { Container, Row, Col } from "react-bootstrap";
 import Image2 from "..//..//..//Images/ParejaAzul.jpg";
-import ofrecer1 from "..//PaintPage/images/paleta-colores-catalogo-o-esquema-pincel.jpg";
+import ofrecer1 from "..//PaintPage/images/ofrecer1.svg";
+import ofrecer2 from "..//PaintPage/images/klipartz.com-_50_.svg";
+import ofrecer3 from "..//PaintPage/images/ofrecer3.svg";
+import ofrecer4 from "..//PaintPage/images/ofrecer4.svg";
 import pensamosenti1 from "..//PaintPage/images/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.jpg";
 import pensamosenti2 from "..//PaintPage/images/blog.jpg";
 import pensamosenti3 from "..//PaintPage/images/contact.jpg";
 
 const PaintPage = ({ handleState, state }) => {
+  //acá pongo la constante si está loggeado el usuario o no. y luego la voy a poner como condicional para que si está loggeado me haga el onclick y si no me redirija
+  const isLoggedIn = localStorage.getItem("email");
   return (
     <>
       <StyledHeader>
@@ -66,19 +71,19 @@ const PaintPage = ({ handleState, state }) => {
             </StyledSubtitle>
           </GridItem>
           <GridItem>
-            <Image src="https://via.placeholder.com/100" />
+            <Image src={ofrecer2} />
             <StyledSubtitle>
               Servicio de pintado de comercios, locales, restaurantes y hoteles
             </StyledSubtitle>
           </GridItem>
           <GridItem>
-            <Image src="https://via.placeholder.com/100" />
+            <Image src={ofrecer3} />
             <StyledSubtitle>
               Servicio de pintado de oficinas y otras instalaciones
             </StyledSubtitle>
           </GridItem>
           <GridItem>
-            <Image src="https://via.placeholder.com/100" />
+            <Image src={ofrecer4} />
             <StyledSubtitle>
               Pinturas decorativas y artísticas para los espacios, vinilos y
               mucho más!

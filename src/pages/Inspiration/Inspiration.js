@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
+import { ContenedorColores } from "./Inspiration-styles";
 
 function InspirationPage() {
   const [palettes, setPalettes] = useState([]);
@@ -58,21 +59,23 @@ function InspirationPage() {
   };
 
   return (
-    <div className="py-5">
+    <div>
       <Container>
         <h1 className="text-center mb-5">Inspírate</h1>
-        <Row>
-          {palettes.map((palette, index) => (
-            <Col md={4} key={index}>
-              <Card className="mb-4" onClick={() => handleCardClick()}>
-                <Card.Img variant="top" src={palette.image.named} />
-                <Card.Body>
-                  <Card.Title>{palette.name.value}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <ContenedorColores>
+          <Row>
+            {palettes.map((palette, index) => (
+              <Col md={4} key={index}>
+                <Card className="mb-4" onClick={() => handleCardClick()}>
+                  <Card.Img variant="top" src={palette.image.named} />
+                  <Card.Body>
+                    <Card.Title>{palette.name.value}</Card.Title>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </ContenedorColores>
 
         <Row>
           <Col className="text-center mb-5">
