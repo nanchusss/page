@@ -14,6 +14,7 @@ function InspirationPage() {
   useEffect(() => {
     console.log("hola estoy usando useEffect");
     const fetchPalettes = async () => {
+      //numero aleatorio hexadecimal. Multiplico unnúmero aleatorio por ese número y después lo redonde y después lo hago hexademimal
       const randomHex = Math.floor(Math.random() * 16777215).toString(16);
       const result = await axios(
         `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
@@ -52,9 +53,11 @@ function InspirationPage() {
 
   const handleMoreColorsClick = async () => {
     const randomHex = Math.floor(Math.random() * 16777215).toString(16);
+    //de nuevo vuelvo a llamar a la api para que me dé otros colores para que se inspire el cliente.
     const result = await axios(
       `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
     );
+    console.log(palettes);
     setPalettes(result.data.colors);
   };
 

@@ -1,7 +1,7 @@
 import PaintPage from "./components/PaintPage/PaintPage/PaintPage";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
-import Header1 from "./components/Header/Header1";
+import Header1 from "./components/Header/Header";
 import PasarelaImagenes from "./components/PasarelaImagenes/PasarelaImagenes";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Group from "./components/Group/Group";
@@ -9,12 +9,19 @@ import Footer from "./components/Footer/Footer";
 import { useState } from "react";
 import InspirationPage from "./pages/Inspiration/Inspiration";
 import Login from "./pages/Login/Login";
+import Blog from "./pages/Blog/Blog";
 
 function App() {
   const [state, setState] = useState(false);
   const [login, setLogin] = useState(false);
   const [alreadyLogged, setAlreadyLogged] = useState(false);
+  const [showBlog, setShowBlog] = useState(false);
 
+  // acá ponemos para mostrar o no el blog el handle.
+  const handleShowBlog = () => {
+    console.log("mostrar blog");
+    setShowBlog(true);
+  };
   //click para mostrar la página de Inspiración
   const handleState = () => {
     console.log(
@@ -64,6 +71,9 @@ function App() {
       </>
     );
   }
+  if (showBlog === true) {
+    return <Blog />;
+  }
 
   return (
     <>
@@ -71,7 +81,11 @@ function App() {
       <Header1 handleLogin={handleLogin} handleState={handleState}></Header1>
       <PasarelaImagenes />
       <Group />
-      <PaintPage state={state} handleState={handleState} />
+      <PaintPage
+        state={state}
+        handleState={handleState}
+        handleShowBlog={handleShowBlog}
+      />
       <Footer />
     </>
   );

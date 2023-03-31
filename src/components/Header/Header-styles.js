@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Navbar, Nav } from "react-bootstrap";
 
 export const Usuario = styled.div`
   padding: 20px;
@@ -17,3 +18,39 @@ export const Div = styled.div`
 
   align-items: center;
 `;
+
+export const Logo = styled.img`
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+`;
+
+export const NavbarContainer = styled(Navbar)`
+  width: 100%;
+  height: 120px; // Ajuste la altura para acomodar los botones
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+`;
+
+export const NavLinks = styled(Nav)`
+  font-size: 22px;
+  margin-left: 30%;
+  margin-right: 30%;
+  flex-grow: 1;
+  justify-content: center;
+`;
+
+export const ButtonsHeader = styled.div`
+  position: absolute;
+  top: 25px; // Ajuste el valor de posición superior
+  right: 10px; // Ajuste el valor de posición derecha
+`;
+export const styles = {
+  link: {
+    marginLeft: "10px",
+  },
+};
