@@ -25,8 +25,12 @@ export const StyledTitle = styled.h1`
   font-family: src(
     "https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Tilt+Warp&display=swap"
   );
-
-  margin-top: 40px;
+  @media only screen and (max-width: 768px) {
+    font-size: 30px;
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+  }
 `;
 
 export const StyledSubtitle = styled.p`
@@ -34,7 +38,10 @@ export const StyledSubtitle = styled.p`
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  font-size: 18px;
+  font-size: 22px;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const StyledButton = styled(Button)`
@@ -58,10 +65,11 @@ export const Btn = styled(Button)`
 export const Container2 = styled.div`
   background-color: #cae0e7;
   display: flex;
+  margin-top: 40px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
 
   @media only screen and (max-width: 768px) {
     height: auto;
@@ -76,7 +84,7 @@ export const Title = styled.h1`
   text-align: center;
 
   @media only screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 

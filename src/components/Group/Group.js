@@ -1,19 +1,13 @@
+import { ContainerGroup, StyledCard } from "./Group-styles";
 import Card from "react-bootstrap/Card";
-import { ContainerGroup } from "./Group-styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaintRoller } from "@fortawesome/free-solid-svg-icons";
 import { faAward } from "@fortawesome/free-solid-svg-icons";
 
-function Group() {
+const Group = () => {
   return (
     <ContainerGroup>
-      <Card
-        style={{
-          width: "26rem",
-          border: "none",
-          textAlign: "center",
-        }}
-      >
+      <StyledCard>
         <Card.Body>
           <FontAwesomeIcon icon={faPaintRoller} size="2xl" />
           <Card.Title style={{ fontWeight: "600", fontSize: "16px" }}>
@@ -26,8 +20,8 @@ function Group() {
             Card Link
           </Card.Link>
         </Card.Body>
-      </Card>
-      <Card style={{ width: "26rem", border: "none", textAlign: "center" }}>
+      </StyledCard>
+      <StyledCard>
         <Card.Body>
           <FontAwesomeIcon icon={faAward} size="2xl" />
           <Card.Title style={{ fontWeight: "600", fontSize: "16px" }}>
@@ -40,8 +34,8 @@ function Group() {
             Card Link
           </Card.Link>
         </Card.Body>
-      </Card>
-      <Card style={{ width: "26rem", border: "none", textAlign: "center" }}>
+      </StyledCard>
+      <StyledCard>
         <Card.Body>
           <FontAwesomeIcon icon={faPaintRoller} size="2xl" />
           <Card.Title style={{ fontWeight: "600", fontSize: "16px" }}>
@@ -54,9 +48,9 @@ function Group() {
             Card Link
           </Card.Link>
         </Card.Body>
-      </Card>
+      </StyledCard>
     </ContainerGroup>
   );
-}
+};
 
 export default Group;

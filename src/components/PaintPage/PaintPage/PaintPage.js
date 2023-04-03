@@ -28,7 +28,7 @@ import pensamosenti1 from "..//PaintPage/images/diseno-interiores-sala-estar-mod
 import pensamosenti2 from "..//PaintPage/images/blog.jpg";
 import pensamosenti3 from "..//PaintPage/images/contact.jpg";
 
-const PaintPage = ({ handleState, state, handleShowBlog }) => {
+const PaintPage = ({ handleState, state, handleShowBlog, handleShowQuizz }) => {
   //acá pongo la constante si está loggeado el usuario o no. y luego la voy a poner como condicional para que si está loggeado me haga el onclick y si no me redirija
   const isLoggedIn = localStorage.getItem("email");
   return (
@@ -43,7 +43,7 @@ const PaintPage = ({ handleState, state, handleShowBlog }) => {
               xs={6}
               className="d-flex justify-content-center align-items-center"
             >
-              <Btn>Cotiza Online!</Btn>
+              <Btn onClick={handleShowQuizz}>Cotiza Online!</Btn>
             </Col>
           </Row>
         </Container>
@@ -60,7 +60,9 @@ const PaintPage = ({ handleState, state, handleShowBlog }) => {
           </Row>
         </Container>
       </Fondo>
-      <StyledButton variant="primary">Solicitar cotización</StyledButton>
+      <StyledButton variant="primary" onClick={handleShowQuizz}>
+        Solicitar cotización
+      </StyledButton>
       <Container2>
         <Title>Qué podemos ofrecerte?</Title>
         <Grid>

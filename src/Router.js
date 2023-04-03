@@ -7,12 +7,14 @@ import InspirationPage from "./pages/Inspiration/Inspiration";
 import { useState } from "react";
 import Login from "./pages/Login/Login";
 import Header1 from "./components/Header/Header";
+import Quiz from "./pages/Quizz/Quizz";
 
 const Router = () => {
   const [state, setState] = useState(false);
   const [login, setLogin] = useState(false);
   const [alreadyLogged, setAlreadyLogged] = useState(false);
   const [showBlog, setShowBlog] = useState(false);
+  const [showQuizz, setShowQuizz] = useState(false);
 
   // acá ponemos para mostrar o no el blog el handle.
   const handleShowBlog = () => {
@@ -34,6 +36,11 @@ const Router = () => {
   const handleSetAlreadyLogged = () => {
     console.log("seteando alreaday logged para manejar el renderizado");
     setAlreadyLogged(true);
+  };
+  //Mostrar Quizz
+  const handleShowQuizz = () => {
+    console.log("mostrar Quizz");
+    setShowQuizz(true);
   };
 
   if (login === true) {
@@ -80,6 +87,16 @@ const Router = () => {
       </>
     );
   }
+  if (showQuizz === true) {
+    console.log("mostrar Quizz");
+    return (
+      <>
+        {/* <Header></Header> */}
+        <Quiz></Quiz>
+        {/* <Footer /> */}
+      </>
+    );
+  }
   return (
     <>
       <Header1 handleLogin={handleLogin} />
@@ -102,6 +119,7 @@ const Router = () => {
             index
             element={
               <Home
+                handleShowQuizz={handleShowQuizz}
                 state={state}
                 handleState={handleState}
                 handleShowBlog={handleShowBlog}
@@ -110,6 +128,7 @@ const Router = () => {
             }
           />
           <Route path="/Blog/" element={<Blog />} />
+          <Route path="/Quizz/" element={<Quiz />} />
           <Route
             path="/Login/"
             element={
