@@ -14,6 +14,7 @@ export const ContainerForm = styled.form`
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 100px;
 `;
 export const style = {
   img: {

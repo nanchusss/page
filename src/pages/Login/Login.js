@@ -3,7 +3,15 @@ import Form from "react-bootstrap/Form";
 import { useState, useEffect } from "react";
 import { ContainerForm } from "./Login-styles";
 
-const Login = ({ handleLogin, handleSetAlreadyLogged, alreadyLogged }) => {
+const Login = ({
+  state,
+  login,
+  handleLogin,
+  handleSetAlreadyLogged,
+  alreadyLogged,
+}) => {
+  console.log("está entrando login");
+  console.log(alreadyLogged);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);

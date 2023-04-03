@@ -1,11 +1,13 @@
 import React from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
+
 import {
   NavbarContainer,
   Logo,
   NavLinks,
   styles,
   ButtonsHeader,
+  ButtonsHeader2,
 } from "./Header-styles";
 import LogoMarca from "..//.//../Images/White and Blue Minimalist Clean Modern Technology Logo (4) (1).jpg";
 
@@ -34,29 +36,35 @@ const Header = ({ handleLogin }) => {
           <Nav.Link stylee={styles.link} href="/" className="pl-3">
             Inicio
           </Nav.Link>
-          <Nav.Link style={styles.link} href="/productos">
-            Productos
+          <Nav.Link style={styles.link} href="/inspiration">
+            Inspírate
+          </Nav.Link>
+          <Nav.Link style={styles.link} href="/blog">
+            Blog
           </Nav.Link>
         </NavLinks>
         <Nav>
           {isLoggedIn ? (
             <>
-              <Nav.Item>
-                <Nav.Link className="mr-2 m-4">{isLoggedIn}</Nav.Link>
-              </Nav.Item>
-              <Button
-                variant="danger"
-                className="ml-2 m-4"
-                onClick={handleLogout}
-              >
-                Cerrar sesión
-              </Button>
+              <ButtonsHeader2>
+                <Nav.Item>
+                  <Nav.Link className="mr-2 m-4">{isLoggedIn}</Nav.Link>
+                </Nav.Item>
+                <Button
+                  variant="danger"
+                  className="ml-2 m-4"
+                  onClick={handleLogout}
+                >
+                  Cerrar sesión
+                </Button>
+              </ButtonsHeader2>
             </>
           ) : (
             <ButtonsHeader>
               <Button variant="primary" className="m-3" onClick={handleLogin}>
                 Iniciar sesión
               </Button>
+
               <Button variant="success" className="m-3">
                 Solicitar cotización
               </Button>

@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 export const FooterCard = styled(Card)`
-  padding: 30px;
   background-color: #141414;
   display: flex;
   color: #8f8d8d;
@@ -13,6 +12,7 @@ export const FooterCard = styled(Card)`
 `;
 
 export const FooterTitle = styled(Card.Title)`
+  margin-top: 5px;
   text-align: center;
 `;
 

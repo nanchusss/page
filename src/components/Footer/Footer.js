@@ -6,7 +6,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <FooterCard>
-      <Card.Header>Cruz del Sur</Card.Header>
+      <Card.Header style={{ marginTop: "20px" }}>Cruz del Sur</Card.Header>
       <Card.Body className="text-center">
         <FooterTitle>Barcelona, España 2023</FooterTitle>
         <Card.Text>Todos los derechos reservados</Card.Text>

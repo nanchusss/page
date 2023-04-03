@@ -5,6 +5,7 @@ import {
   BlogTitle,
   BlogRow,
   BlogColumn,
+  Title,
 } from "./Blog-styles";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -19,7 +20,10 @@ const Blog = () => {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
-          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults2=&q=$tipsdecoracioninteriores&key=${API_KEY}`
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${encodeURIComponent(
+            "westwing españa homestories OR Less&conscious"
+          )}&key=${API_KEY}
+`
         );
         setVideos(response.data.items);
       } catch (error) {
@@ -35,14 +39,14 @@ const Blog = () => {
 
   return (
     <>
-      <Header />
+      <Title>Videos</Title>
       <BlogContainer>
         <BlogRow>
           {videos.map((video, index) => (
             <BlogColumn key={index}>
               <BlogCard
                 style={{
-                  backgroundImage: `url(${video?.snippet?.thumbnails?.high?.urls})`,
+                  backgroundImage: `url(${video?.snippet?.thumbnails?.high?.url})`,
                 }}
                 onClick={() => handleVideoClick(video)}
               ></BlogCard>
@@ -53,7 +57,6 @@ const Blog = () => {
           ))}
         </BlogRow>
       </BlogContainer>
-      <Footer />
     </>
   );
 };

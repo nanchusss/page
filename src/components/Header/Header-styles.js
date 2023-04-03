@@ -38,8 +38,8 @@ export const NavbarContainer = styled(Navbar)`
 
 export const NavLinks = styled(Nav)`
   font-size: 22px;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
   flex-grow: 1;
   justify-content: center;
 `;
@@ -48,6 +48,14 @@ export const ButtonsHeader = styled.div`
   position: absolute;
   top: 25px; // Ajuste el valor de posición superior
   right: 10px; // Ajuste el valor de posición derecha
+`;
+export const ButtonsHeader2 = styled.div`
+  position: absolute;
+  width: 300px;
+  flex-direction: row;
+  display: flex;
+  top: 25px; // Ajuste el valor de posición superior
+  right: 50px; // Ajuste el valor de posición derecha
 `;
 export const styles = {
   link: {

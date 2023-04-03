@@ -2,9 +2,19 @@ import styled from "styled-components";
 import { Card } from "react-bootstrap";
 
 export const BlogContainer = styled.div`
+  padding-top: 20px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+`;
+
+export const Title = styled.title`
+  padding-top: 20px;
+  margin-top: 50px;
+  margin: 0 auto;
+  padding: 20px;
+  color: black;
+  font-size: 55px;
 `;
 
 export const BlogRow = styled.div`

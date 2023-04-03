@@ -5,9 +5,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
-import { ContenedorColores } from "./Inspiration-styles";
+import { ContenedorColores, Mybuttons } from "./Inspiration-styles";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
-function InspirationPage() {
+function InspirationPage({ handleLogin }) {
   const [palettes, setPalettes] = useState([]);
   const [images, setImages] = useState([]);
 
@@ -81,19 +83,21 @@ function InspirationPage() {
         </ContenedorColores>
 
         <Row>
-          <Col className="text-center mb-5">
-            <button
-              className="btn btn-primary mt-3 mr-3"
-              onClick={() => handleMoreColorsClick()}
-            >
-              Ver más colores
-            </button>
-            <button
-              className="btn btn-primary mt-3"
-              onClick={() => handleCardClick()}
-            >
-              Inspírate con imágenes únicas
-            </button>
+          <Col className="text-center mb-5 ">
+            <Mybuttons>
+              <button
+                className="btn btn-primary mt-3 m-3"
+                onClick={() => handleMoreColorsClick()}
+              >
+                Ver más colores
+              </button>
+              <button
+                className="btn btn-primary m-3"
+                onClick={() => handleCardClick()}
+              >
+                Inspírate con imágenes únicas
+              </button>
+            </Mybuttons>
           </Col>
           <Col md={{ span: 8, offset: 2 }}>
             <Carousel className="custom-carousel">

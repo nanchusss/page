@@ -55,7 +55,6 @@ export const Btn = styled(Button)`
   display: flex;
   justify-content: left;
 `;
-
 export const Container2 = styled.div`
   background-color: #cae0e7;
   display: flex;
@@ -63,6 +62,10 @@ export const Container2 = styled.div`
   align-items: center;
   justify-content: center;
   height: 60vh;
+
+  @media only screen and (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 export const Title = styled.h1`
@@ -71,6 +74,10 @@ export const Title = styled.h1`
   font-weight: bold;
   font-size: 30px;
   text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const Grid = styled.div`
@@ -80,6 +87,12 @@ export const Grid = styled.div`
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   margin-top: 20px;
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+  }
 `;
 
 export const GridItem = styled.div`
@@ -88,6 +101,11 @@ export const GridItem = styled.div`
   justify-content: center;
   flex-direction: row;
   padding: 20px;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const Image = styled.img`
@@ -95,6 +113,11 @@ export const Image = styled.img`
   height: 100px;
   margin-bottom: 10px;
   margin-right: 30px;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 `;
 
 export const ContainerSection = styled.div`
