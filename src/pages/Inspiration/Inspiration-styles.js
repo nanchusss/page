@@ -4,6 +4,7 @@ export const ContenedorColores = styled.div`
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +28,7 @@ export const Mybuttons = styled.div`
     cursor: pointer;
 
     &:hover {
-      background-color: #3e8e41;
+      background-color: #337636;
     }
 
     &:focus {

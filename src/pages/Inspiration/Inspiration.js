@@ -6,8 +6,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import { ContenedorColores, Mybuttons } from "./Inspiration-styles";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 
 function InspirationPage({ handleLogin }) {
   const [palettes, setPalettes] = useState([]);
@@ -99,7 +97,7 @@ function InspirationPage({ handleLogin }) {
               </button>
             </Mybuttons>
           </Col>
-          <Col md={{ span: 8, offset: 2 }}>
+          <Col style={{ marginBottom: "40px" }} md={{ span: 8, offset: 2 }}>
             <Carousel className="custom-carousel">
               {images.map((image, index) => (
                 <Carousel.Item key={index}>

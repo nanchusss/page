@@ -36,6 +36,7 @@ const Router = () => {
   const handleSetAlreadyLogged = () => {
     console.log("seteando alreaday logged para manejar el renderizado");
     setAlreadyLogged(true);
+    console.log(alreadyLogged);
   };
   //Mostrar Quizz
   const handleShowQuizz = () => {
@@ -57,7 +58,11 @@ const Router = () => {
     console.log("state es true y alreadylogged es false");
     return (
       <>
-        <Login />
+        <Login
+          login={login}
+          handleLogin={handleLogin}
+          handleSetAlreadyLogged={handleSetAlreadyLogged}
+        />
         <Footer />
       </>
     );
@@ -68,13 +73,9 @@ const Router = () => {
     console.log("holis, el areadylogged es true y le dieron click a la card");
     return (
       <>
-        return (
-        <>
-          <Header></Header>
-          <InspirationPage />
-          <Footer></Footer>
-        </>
-        );
+        <Header></Header>
+        <InspirationPage />
+        <Footer></Footer>
       </>
     );
   }
@@ -124,6 +125,7 @@ const Router = () => {
                 handleState={handleState}
                 handleShowBlog={handleShowBlog}
                 showBlog={showBlog}
+                handleSetAlreadyLogged={handleSetAlreadyLogged}
               />
             }
           />

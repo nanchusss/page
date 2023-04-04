@@ -47,7 +47,7 @@ const Quiz = () => {
     };
     console.log(data);
     setPresupuestos(...data);
-    console.lo(presupuesto);
+    console.log(presupuesto);
   };
 
   return (
