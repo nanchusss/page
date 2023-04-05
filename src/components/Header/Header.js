@@ -11,7 +11,7 @@ import {
 } from "./Header-styles";
 import LogoMarca from "..//.//../Images/White and Blue Minimalist Clean Modern Technology Logo (4) (1).jpg";
 
-const Header = ({ handleLogin }) => {
+const Header = ({ handleLogin, handleShowQuizz }) => {
   //isLoggedIn posee la info de mail
   const isLoggedIn = localStorage.getItem("email");
 
@@ -65,7 +65,11 @@ const Header = ({ handleLogin }) => {
                 Iniciar sesión
               </Button>
 
-              <Button variant="success" className="m-3">
+              <Button
+                variant="success"
+                className="m-3"
+                onClick={handleShowQuizz}
+              >
                 Solicitar cotización
               </Button>
             </ButtonsHeader>

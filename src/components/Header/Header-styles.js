@@ -51,7 +51,7 @@ export const ButtonsHeader = styled.div`
 `;
 export const ButtonsHeader2 = styled.div`
   position: absolute;
-  width: 300px;
+  width: auto;
   flex-direction: row;
   display: flex;
   top: 25px; // Ajuste el valor de posición superior

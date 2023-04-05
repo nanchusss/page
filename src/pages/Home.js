@@ -1,9 +1,14 @@
 import PaintPage from "../components/PaintPage/PaintPage/PaintPage";
-
 import PasarelaImagenes from "../components/PasarelaImagenes/PasarelaImagenes";
 import Group from "../components/Group/Group";
 
-const Home = ({ state, handleState, handleShowBlog, handleShowQuizz }) => {
+const Home = ({
+  state,
+  handleState,
+  handleShowBlog,
+  handleShowQuizz,
+  handleShowForm,
+}) => {
   return (
     <>
       {/* <Header handleLogin={handleLogin}></Header> */}
@@ -15,6 +20,7 @@ const Home = ({ state, handleState, handleShowBlog, handleShowQuizz }) => {
         state={state}
         handleState={handleState}
         handleShowBlog={handleShowBlog}
+        handleShowForm={handleShowForm}
       />
       {/* <Footer /> */}
     </>

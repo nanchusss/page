@@ -8,6 +8,7 @@ import { useState } from "react";
 import Login from "./pages/Login/Login";
 import Header1 from "./components/Header/Header";
 import Quiz from "./pages/Quizz/Quizz";
+import ContactForm from "./pages/Contacto/Contacto";
 
 const Router = () => {
   const [state, setState] = useState(false);
@@ -15,6 +16,11 @@ const Router = () => {
   const [alreadyLogged, setAlreadyLogged] = useState(false);
   const [showBlog, setShowBlog] = useState(false);
   const [showQuizz, setShowQuizz] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
+  const handleShowForm = () => {
+    setShowForm(true);
+  };
 
   // acá ponemos para mostrar o no el blog el handle.
   const handleShowBlog = () => {
@@ -50,6 +56,15 @@ const Router = () => {
       <>
         <Login />
         <Footer />
+      </>
+    );
+  }
+  if (showForm === true) {
+    console.log("muestra el formulario de contacto");
+    return (
+      <>
+        <Header />
+        <ContactForm />
       </>
     );
   }
@@ -103,7 +118,7 @@ const Router = () => {
   }
   return (
     <>
-      <Header1 handleLogin={handleLogin} />
+      <Header1 handleLogin={handleLogin} handleShowQuizz={handleShowQuizz} />
 
       <BrowserRouter>
         <Routes>
@@ -129,6 +144,7 @@ const Router = () => {
                 handleShowBlog={handleShowBlog}
                 showBlog={showBlog}
                 handleSetAlreadyLogged={handleSetAlreadyLogged}
+                handleShowForm={handleShowForm}
               />
             }
           />
