@@ -30,8 +30,9 @@ const ContactForm = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicMessage">
-          <Form.Label style={{ width: "100%" }}>Mensaje</Form.Label>
+          <Form.Label>Mensaje</Form.Label>
           <StyledFormControl
+            style={{ width: "100%", borderRadius: "5px" }}
             as="textarea"
             rows={3}
             placeholder="Escribe aquí tu mensaje"

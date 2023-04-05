@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 
 export const StyledFormContainer = styled.div`
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
