@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Form } from "react-bootstrap";
 
 export const QuizCard = styled(Card)`
   margin: auto;
@@ -14,6 +14,11 @@ export const QuizCard = styled(Card)`
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+`;
+export const Formy = styled(Form)`
+  margin-top: 70px;
+  padding-right: 40px;
+  padding-left: 40px;
 `;
 
 export const Title = styled(Card.Title)`

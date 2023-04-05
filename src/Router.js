@@ -92,7 +92,10 @@ const Router = () => {
     console.log("mostrar Quizz");
     return (
       <>
-        {/* <Header></Header> */}
+        <div style={{ position: "fixed", top: 0 }}>
+          <Header></Header>
+        </div>
+
         <Quiz></Quiz>
         {/* <Footer /> */}
       </>

@@ -1,12 +1,31 @@
 import styled from "styled-components";
 import Card from "react-bootstrap/Card";
+import Modal from "react-bootstrap/Modal";
 
 export const ContainerGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
-
+export const StyledModal = styled(Modal)`
+  .modal-dialog {
+    max-width: 90%;
+    margin: 100px auto;
+  }
+`;
+export const StyledText = styled.p`
+  margin-bottom: 5px;
+  font-size: 16px;
+`;
+export const StyledTitle = styled.p`
+  font-size: 22px;
+  margin-bottom: 10px;
+`;
+export const DivText = styled.p`
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+`;
 export const StyledCard = styled(Card)`
   border: none;
   text-align: center;
