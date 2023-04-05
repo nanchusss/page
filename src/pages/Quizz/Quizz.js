@@ -173,7 +173,10 @@ const Quiz = () => {
       {page === 5 && (
         <QuizCard>
           <Card.Body>
-            <Title>Perfecto! Deja tu número para que te contactemos:</Title>
+            <Title>
+              Perfecto {nombreCliente}! Deja un número telefónico para que te
+              contactemos:
+            </Title>
             <Formy onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Control
