@@ -12,8 +12,10 @@ function InspirationPage({ handleLogin }) {
   const [palettes, setPalettes] = useState([]);
   const [images, setImages] = useState([]);
 
+  // PRIMER LLAMADO PARA TRAER LAS PALETAS DE COLORES
   useEffect(() => {
     const fetchPalettesData = async () => {
+      //acá ponemos en practica el services.js, la constante fetchPalettes nos va a servir para ya tener el llamado organizado a la api.
       const palettesData = await fetchPalettes();
       console.log(palettes);
 
@@ -53,7 +55,10 @@ function InspirationPage({ handleLogin }) {
     }
   };
 
+  //LLAMADO PARA ACTUALIZAR EL LLAMADO DE PALETAS Y TRAER MÁS PALETAS
+
   const handleMoreColorsClick = async () => {
+    //volvemos a usar el services, donde ya tenemos el llamado.
     const palettesData = await fetchPalettes();
     setPalettes(palettesData);
   };
