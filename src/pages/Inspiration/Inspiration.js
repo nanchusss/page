@@ -6,28 +6,30 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import { ContenedorColores, Mybuttons } from "./Inspiration-styles";
+import { fetchPalettes } from "..//..//services";
 
 function InspirationPage({ handleLogin }) {
   const [palettes, setPalettes] = useState([]);
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    console.log("hola estoy usando useEffect");
-    const fetchPalettes = async () => {
-      //numero aleatorio hexadecimal. Multiplico unnúmero aleatorio por ese número y después lo redonde y después lo hago hexademimal
-      const randomHex = Math.floor(Math.random() * 16777215).toString(16);
-      const result = await axios(
-        `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
-      );
-      setPalettes(result.data.colors);
+    const fetchPalettesData = async () => {
+      const palettesData = await fetchPalettes();
+      console.log(palettes);
+
+      setPalettes(palettesData);
+      console.log(palettes);
     };
-    fetchPalettes();
+    fetchPalettesData();
   }, []);
 
   useEffect(() => {
-    // pre-cargar imágenes
+    // pre-carganado las imágenes
     palettes.forEach((palette) => {
+      //cada elemento del array es una imagen
       const img = new Image();
+      console.log(palettes);
+      console.log(palette.image.bare);
       img.src = `https://www.thecolorapi.com${palette.image.bare}`;
     });
   }, [palettes]);
@@ -52,14 +54,18 @@ function InspirationPage({ handleLogin }) {
   };
 
   const handleMoreColorsClick = async () => {
-    const randomHex = Math.floor(Math.random() * 16777215).toString(16);
-    //de nuevo vuelvo a llamar a la api para que me dé otros colores para que se inspire el cliente.
-    const result = await axios(
-      `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
-    );
-    console.log(palettes);
-    setPalettes(result.data.colors);
+    const palettesData = await fetchPalettes();
+    setPalettes(palettesData);
   };
+  // const handleMoreColorsClick = async () => {
+  //   const randomHex = Math.floor(Math.random() * 16777215).toString(16);
+  //   //de nuevo vuelvo a llamar a la api para que me dé otros colores para que se inspire el cliente.
+  //   const result = await axios(
+  //     `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
+  //   );
+  //   console.log(palettes);
+  //   setPalettes(result.data.colors);
+  // };
 
   return (
     <div>

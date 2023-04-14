@@ -14,6 +14,7 @@ const Quiz = () => {
   //switch para cambiar la pagina del quizz y vamos guardando todos los estados en un objeto
   const handleOptionSelect = (option) => {
     switch (page) {
+      //bueno acá las páginas van cambiando con el switch según el condicional del return para renderizar cada una.
       case 1:
         setTipoTrabajo(option);
         setPage(2);
