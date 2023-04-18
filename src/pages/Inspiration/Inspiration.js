@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,7 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { ContenedorColores, Mybuttons } from "./Inspiration-styles";
 import { fetchPalettes, fetchImages } from "..//..//services";
 
-function InspirationPage({ handleLogin }) {
+function InspirationPage({ handleLogin, alreadyLogged }) {
   const [palettes, setPalettes] = useState([]);
   const [images, setImages] = useState([]);
 
@@ -36,29 +37,29 @@ function InspirationPage({ handleLogin }) {
     });
   }, [palettes]);
 
-  const handleCardClick = async () => {
-    console.log("Esta andando el handleclick de las fotos");
-    const images = await fetchImages();
-    setImages(images);
-  };
   // const handleCardClick = async () => {
   //   console.log("Esta andando el handleclick de las fotos");
-  //   try {
-  //     const randomPage = Math.floor(Math.random() * 10) + 1;
-  //     const result = await axios(
-  //       `https://api.unsplash.com/search/photos?query=interior+color&per_page=10&page=${randomPage}`,
-  //       {
-  //         headers: {
-  //           Authorization:
-  //             "Client-ID Yme6ZcumIXpWryQ0DPc249CE0ua2Mxh66Y-4W2gPAAc",
-  //         },
-  //       }
-  //     );
-  //     setImages(result.data.results);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
+  //   const images = await fetchImages();
+  //   setImages(images);
   // };
+  const handleCardClick = async () => {
+    console.log("Esta andando el handleclick de las fotos");
+    try {
+      const randomPage = Math.floor(Math.random() * 10) + 1;
+      const result = await axios(
+        `https://api.unsplash.com/search/photos?query=interior+color&per_page=10&page=${randomPage}`,
+        {
+          headers: {
+            Authorization:
+              "Client-ID Yme6ZcumIXpWryQ0DPc249CE0ua2Mxh66Y-4W2gPAAc",
+          },
+        }
+      );
+      setImages(result.data.results);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   //LLAMADO PARA ACTUALIZAR EL LLAMADO DE PALETAS Y TRAER MÁS PALETAS
 

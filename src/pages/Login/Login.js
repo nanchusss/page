@@ -8,6 +8,7 @@ const Login = ({
   login,
   handleLogin,
   handleSetAlreadyLogged,
+  setAlreadyLogged,
   alreadyLogged,
 }) => {
   console.log("está entrando login");
@@ -22,6 +23,8 @@ const Login = ({
     console.log(email);
     localStorage.setItem("password", password);
     setLoggedIn(true);
+    handleSetAlreadyLogged(true);
+    console.log("ahora está loggeado desde el componente Login", alreadyLogged);
   };
   useEffect(() => {
     console.log("Cambio en login");

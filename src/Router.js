@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog/Blog";
 import Header from "./components/Header/Header";
@@ -83,8 +84,8 @@ const Router = () => {
     );
   }
 
-  if (alreadyLogged === true && state === true) {
-    console.log(alreadyLogged);
+  if (alreadyLogged === true || state === true) {
+    console.log("ya está loggeado", alreadyLogged);
     console.log("holis, el areadylogged es true y le dieron click a la card");
     return (
       <>
@@ -130,6 +131,7 @@ const Router = () => {
                 login={login}
                 handleLogin={handleLogin}
                 handleSetAlreadyLogged={handleSetAlreadyLogged}
+                setAlreadyLogged={setAlreadyLogged}
               />
             }
           />
@@ -161,7 +163,12 @@ const Router = () => {
               />
             }
           />
-          <Route path="/Inspiration/" element={<InspirationPage />} />
+          <Route
+            path="/inspiration"
+            element={
+              alreadyLogged ? <InspirationPage /> : <Navigate to="/Login/" />
+            }
+          />
           {/* Es muy recomendable añadir esta ruta para obtener un mensaje de error en el caso de que la ruta no exista. De lo contrario, si la ruta no existe llegaremos a una página en blanco */}
           <Route path="*" element={<div>404</div>} />
         </Routes>
