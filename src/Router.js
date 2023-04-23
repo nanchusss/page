@@ -10,7 +10,7 @@ import Quiz from "./pages/Quizz/Quizz";
 import ContactForm from "./pages/Contacto/Contacto";
 import ProtectedRoute from "./components/Protected-routes";
 import { useContext } from "react";
-import { MyProvider, MyContext } from "../src/Context";
+import { MyContext } from "../src/Context";
 
 const Router = () => {
   const {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -9,7 +8,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { ContenedorColores, Mybuttons } from "./Inspiration-styles";
 import { fetchPalettes, fetchImages } from "..//..//services";
 
-function InspirationPage({ handleLogin, alreadyLogged }) {
+function InspirationPage() {
   const [palettes, setPalettes] = useState([]);
   const [images, setImages] = useState([]);
 

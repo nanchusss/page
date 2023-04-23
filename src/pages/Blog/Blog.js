@@ -7,8 +7,6 @@ import {
   BlogColumn,
   Title,
 } from "./Blog-styles";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import axios from "axios";
 
 const API_KEY = "AIzaSyBBjNg6AWvF40NLWecoV5JvZGh5lyp1mhI";

@@ -27,16 +27,19 @@ import ofrecer4 from "..//PaintPage/images/ofrecer4.svg";
 import pensamosenti1 from "..//PaintPage/images/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.jpg";
 import pensamosenti2 from "..//PaintPage/images/blog.jpg";
 import pensamosenti3 from "..//PaintPage/images/contact.jpg";
+import { useContext } from "react";
+import { MyContext } from "../../../Context";
 
-const PaintPage = ({
-  handleState,
-  state,
-  handleShowBlog,
-  handleShowQuizz,
-  handleShowForm,
-}) => {
+const PaintPage = () => {
   //acá pongo la constante si está loggeado el usuario o no. y luego la voy a poner como condicional para que si está loggeado me haga el onclick y si no me redirija
   const isLoggedIn = localStorage.getItem("email");
+  const {
+    handleState,
+    state,
+    handleShowBlog,
+    handleShowQuizz,
+    handleShowForm,
+  } = useContext(MyContext);
   return (
     <>
       <StyledHeader>

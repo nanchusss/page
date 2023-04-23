@@ -1,14 +1,17 @@
 import PaintPage from "../components/PaintPage/PaintPage/PaintPage";
 import PasarelaImagenes from "../components/PasarelaImagenes/PasarelaImagenes";
 import Group from "../components/Group/Group";
+import { MyContext } from "../Context";
+import { useContext } from "react";
 
-const Home = ({
-  state,
-  handleState,
-  handleShowBlog,
-  handleShowQuizz,
-  handleShowForm,
-}) => {
+const Home = () => {
+  const {
+    state,
+    handleState,
+    handleShowBlog,
+    handleShowQuizz,
+    handleShowForm,
+  } = useContext(MyContext);
   return (
     <>
       {/* <Header handleLogin={handleLogin}></Header> */}
