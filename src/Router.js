@@ -10,6 +10,9 @@ import Login from "./pages/Login/Login";
 import Header1 from "./components/Header/Header";
 import Quiz from "./pages/Quizz/Quizz";
 import ContactForm from "./pages/Contacto/Contacto";
+import ProtectedRoute from "./components/Protected-routes";
+import { Provider } from "react-redux";
+import { configureStore } from "@reduxjs/toolkit";
 
 const Router = () => {
   const [state, setState] = useState(false);
@@ -117,6 +120,7 @@ const Router = () => {
       </>
     );
   }
+
   return (
     <>
       <Header1 handleLogin={handleLogin} handleShowQuizz={handleShowQuizz} />
@@ -166,7 +170,18 @@ const Router = () => {
           <Route
             path="/inspiration"
             element={
-              alreadyLogged ? <InspirationPage /> : <Navigate to="/Login/" />
+              <ProtectedRoute alreadyLogged={alreadyLogged}>
+                <Route
+                  path="/inspiration"
+                  element={
+                    alreadyLogged ? (
+                      <InspirationPage />
+                    ) : (
+                      <Navigate to="/Login/" />
+                    )
+                  }
+                />
+              </ProtectedRoute>
             }
           />
           {/* Es muy recomendable añadir esta ruta para obtener un mensaje de error en el caso de que la ruta no exista. De lo contrario, si la ruta no existe llegaremos a una página en blanco */}
