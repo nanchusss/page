@@ -23,6 +23,6 @@ export const styles = {
   img: {
     maxHeight: "700px",
     objectFit: "cover",
-    verticalAlign: "bottom",
+    objectPosition: "top",
   },
 };
