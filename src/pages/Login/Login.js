@@ -1,16 +1,12 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { ContainerForm } from "./Login-styles";
+import { MyContext } from "..//..//Context";
 
-const Login = ({
-  state,
-  login,
-  handleLogin,
-  handleSetAlreadyLogged,
-  setAlreadyLogged,
-  alreadyLogged,
-}) => {
+const Login = () => {
+  const { handleSetAlreadyLogged, alreadyLogged } = useContext(MyContext);
+
   console.log("está entrando login");
   console.log(alreadyLogged);
   const [email, setEmail] = useState("");

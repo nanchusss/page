@@ -7,7 +7,7 @@ export const ContainerForm = styled.form`
   color: #beb8b8;
   display: flex;
   font-size: 22px;
-  margin-top: 60px;
+  margin-top: 100px;
   padding: 20px;
   flex-direction: column;
   justify-content: center;

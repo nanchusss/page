@@ -5,54 +5,33 @@ import Blog from "./pages/Blog/Blog";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import InspirationPage from "./pages/Inspiration/Inspiration";
-import { useState } from "react";
 import Login from "./pages/Login/Login";
-import Header1 from "./components/Header/Header";
 import Quiz from "./pages/Quizz/Quizz";
 import ContactForm from "./pages/Contacto/Contacto";
 import ProtectedRoute from "./components/Protected-routes";
-import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
+import { useContext } from "react";
+import { MyProvider, MyContext } from "../src/Context";
 
 const Router = () => {
-  const [state, setState] = useState(false);
-  const [login, setLogin] = useState(false);
-  const [alreadyLogged, setAlreadyLogged] = useState(false);
-  const [showBlog, setShowBlog] = useState(false);
-  const [showQuizz, setShowQuizz] = useState(false);
-  const [showForm, setShowForm] = useState(false);
+  const {
+    state,
+    handleState,
+    handleShowBlog,
+    handleSetAlreadyLogged,
+    handleShowForm,
+    login,
+    showForm,
+    alreadyLogged,
+    handleLogin,
+    showBlog,
+    showQuizz,
+    handleShowQuizz,
+    setAlreadyLogged,
+  } = useContext(MyContext);
 
-  const handleShowForm = () => {
-    setShowForm(true);
-  };
-
-  // acá ponemos para mostrar o no el blog el handle.
-  const handleShowBlog = () => {
-    console.log("mostrar blog");
-    setShowBlog(true);
-  };
-  //click para mostrar la página de Inspiración
-  const handleState = () => {
-    console.log(
-      "holis estoy manejando la pagina nueva y seteando state como true"
-    );
-    setState(true);
-  };
   //login para entrar en la página loggeado, pero en realidad lo tomo para llamar a login nada más, el que va a desarrollar el loggeado va a ser setAlreadyLogged
-  const handleLogin = () => {
-    console.log("set login andando, ahora login es true");
-    setLogin(true);
-  };
-  const handleSetAlreadyLogged = () => {
-    console.log("seteando alreaday logged para manejar el renderizado");
-    setAlreadyLogged(true);
-    console.log(alreadyLogged);
-  };
+
   //Mostrar Quizz
-  const handleShowQuizz = () => {
-    console.log("mostrar Quizz");
-    setShowQuizz(true);
-  };
 
   if (login === true) {
     console.log("login ahora es true");
@@ -123,7 +102,7 @@ const Router = () => {
 
   return (
     <>
-      <Header1 handleLogin={handleLogin} handleShowQuizz={handleShowQuizz} />
+      <Header handleLogin={handleLogin} handleShowQuizz={handleShowQuizz} />
 
       <BrowserRouter>
         <Routes>

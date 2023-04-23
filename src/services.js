@@ -3,11 +3,14 @@ import axios from "axios";
 export const fetchPalettes = () => {
   //ahi estaría correcto Pablo?
   const randomHex = Math.floor(Math.random() * 16777215).toString(16);
-  return axios
-    .get(
-      `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
-    )
-    .then((response) => response.data.colors);
+  return (
+    axios
+      //no hay una http común porque son apis distintas
+      .get(
+        `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
+      )
+      .then((response) => response.data.colors)
+  );
 };
 
 //seteo de imagenes en Inspiration Page

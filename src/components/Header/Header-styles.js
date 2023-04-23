@@ -34,6 +34,7 @@ export const NavbarContainer = styled(Navbar)`
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  top: 0;
 `;
 
 export const NavLinks = styled(Nav)`
