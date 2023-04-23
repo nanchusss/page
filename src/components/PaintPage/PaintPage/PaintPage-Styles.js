@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+
 export const StyledHeader = styled.header`
   background-color: #fff;
   padding: 20px;
+  margin-bottom: 60px;
 `;
 
 export const StyledImage = styled.img`
+  height: 400px;
   width: 100%;
+  margin-left: 80px;
+  object-fit: cover; /* o cover, dependiendo de lo que necesites */
+  border-radius: 3px;
 `;
 
 export const Fondo = styled.div`
@@ -58,10 +64,13 @@ export const StyledButton = styled(Button)`
   justify-content: center !important;
 `;
 export const Btn = styled(Button)`
-  margin-left: 40px;
+  margin-left: 10px;
   display: flex;
   justify-content: left;
+  font-size: 1.1rem; /* ajusta el tamaño de la fuente */
+  padding: 8px 12px; /* ajusta el padding para hacer el botón un poco más grande */
 `;
+
 export const Container2 = styled.div`
   background-color: #cae0e7;
   display: flex;

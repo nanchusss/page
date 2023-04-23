@@ -25,6 +25,11 @@ export const Logo = styled.img`
   position: fixed;
   top: 10px;
   left: 10px;
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: rotateX(360deg);
+  }
 `;
 
 export const NavbarContainer = styled(Navbar)`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Card } from "react-bootstrap";
+import { Card, Modal } from "react-bootstrap";
 
 export const BlogContainer = styled.div`
   padding-top: 20px;
@@ -36,16 +36,26 @@ export const BlogColumn = styled.div`
   }
 `;
 
-export const BlogCard = styled(Card)`
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+export const BlogCard = styled.div`
+  width: 100%;
+  height: 200px;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   &:hover {
-    cursor: pointer;
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: 768px) {
+    height: 250px;
+  }
+  @media screen and (min-width: 992px) {
+    height: 300px;
+  }
+  @media screen and (min-width: 1200px) {
+    height: 350px;
   }
 `;
 
@@ -54,4 +64,21 @@ export const BlogTitle = styled.h2`
   font-weight: bold;
   color: #2b2b2b;
   margin-bottom: 40px;
+`;
+
+export const CenteredModal = styled(Modal)`
+  .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 90%;
+  }
+
+  .embed-responsive-item {
+    width: 100%;
+    height: 500px;
+  }
 `;

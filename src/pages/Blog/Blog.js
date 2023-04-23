@@ -6,22 +6,25 @@ import {
   BlogRow,
   BlogColumn,
   Title,
+  CenteredModal,
 } from "./Blog-styles";
 import axios from "axios";
+import { Modal } from "react-bootstrap";
 
 const API_KEY = "AIzaSyBBjNg6AWvF40NLWecoV5JvZGh5lyp1mhI";
 
 const Blog = () => {
   const [videos, setVideos] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(null);
 
   useEffect(() => {
     const fetchVideos = async () => {
       try {
         const response = await axios.get(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${encodeURIComponent(
-            "westwing españa homestories OR Less&conscious"
-          )}&key=${API_KEY}
-`
+            "westwing españa OR westing español OR interior diseño colorido OR diseño interiores"
+          )}&key=${API_KEY}`
         );
         setVideos(response.data.items);
       } catch (error) {
@@ -32,7 +35,12 @@ const Blog = () => {
   }, []);
 
   const handleVideoClick = (video) => {
-    console.log("holi le doy click al video");
+    setCurrentVideo(video);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -45,6 +53,7 @@ const Blog = () => {
               <BlogCard
                 style={{
                   backgroundImage: `url(${video?.snippet?.thumbnails?.high?.url})`,
+                  backgroundSize: "100%",
                 }}
                 onClick={() => handleVideoClick(video)}
               ></BlogCard>
@@ -55,6 +64,22 @@ const Blog = () => {
           ))}
         </BlogRow>
       </BlogContainer>
+      {currentVideo && (
+        <CenteredModal show={showModal} onHide={closeModal} size="lg">
+          <Modal.Header closeButton>
+            <Modal.Title>{currentVideo.snippet.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="embed-responsive embed-responsive-16by9">
+              <iframe
+                title={currentVideo.snippet.title}
+                className="embed-responsive-item"
+                src={`https://www.youtube.com/embed/${currentVideo.id.videoId}`}
+              ></iframe>
+            </div>
+          </Modal.Body>
+        </CenteredModal>
+      )}
     </>
   );
 };

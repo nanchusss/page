@@ -19,7 +19,7 @@ import {
   CustomCardText,
 } from "./PaintPage-Styles";
 import { Container, Row, Col } from "react-bootstrap";
-import Image2 from "..//..//..//Images/ParejaAzul.jpg";
+import Image2 from "..//..//PaintPage/PaintPage/images/mujer.jpg";
 import ofrecer1 from "..//PaintPage/images/ofrecer1.svg";
 import ofrecer2 from "..//PaintPage/images/klipartz.com-_50_.svg";
 import ofrecer3 from "..//PaintPage/images/ofrecer3.svg";

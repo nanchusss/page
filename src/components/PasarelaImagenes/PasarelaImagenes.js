@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import CarouselItem1 from "../PasarelaImagenes/Images/Pincel.jpg";
-import CarouselItem2 from "../PasarelaImagenes/Images/ElegirColorPareja.jpg";
-import CarouselItem3 from "../PasarelaImagenes/Images/ParejaAzul.jpg";
+import CarouselItem2 from "../PasarelaImagenes/Images/interior.jpg";
+import CarouselItem3 from "../PasarelaImagenes/Images/mujer.jpg";
 import { Subtitulo, Titulo, styles } from "./PasarelaImagenes-styles";
 
 function PasarelaImagenes() {
