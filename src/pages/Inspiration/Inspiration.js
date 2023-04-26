@@ -6,18 +6,20 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import { ContenedorColores, Mybuttons } from "./Inspiration-styles";
-import { fetchPalettes, fetchImages } from "..//..//services";
+import { fetchPalettes, fetchImages2 } from "..//..//services";
 
 function InspirationPage() {
   const [palettes, setPalettes] = useState([]);
   const [images, setImages] = useState([]);
 
-  // PRIMER LLAMADO PARA TRAER LAS PALETAS DE COLORES
+  // PABLO ASÍ ESTARÍA? SETEO AQUÍ LA PALETA.s
+
+  //aquí estoy haciendo el seteo de la paleta aquí y solo tengo en services el llamado a la api...estaría bien?
   useEffect(() => {
     const fetchPalettesData = async () => {
       try {
-        const palettesData = await fetchPalettes();
-        setPalettes(palettesData);
+        const response = await fetchPalettes();
+        setPalettes(response.data.colors);
       } catch (error) {
         console.error(error);
       }
@@ -41,41 +43,26 @@ function InspirationPage() {
   //   const images = await fetchImages();
   //   setImages(images);
   // };
+
+  //modificado...seteo imagenes aquí donde llamo al método...
   const handleCardClick = async () => {
     console.log("Esta andando el handleclick de las fotos");
     try {
-      const randomPage = Math.floor(Math.random() * 10) + 1;
-      const result = await axios(
-        `https://api.unsplash.com/search/photos?query=interior+color&per_page=10&page=${randomPage}`,
-        {
-          headers: {
-            Authorization:
-              "Client-ID Yme6ZcumIXpWryQ0DPc249CE0ua2Mxh66Y-4W2gPAAc",
-          },
-        }
-      );
-      setImages(result.data.results);
+      const response = await fetchImages2();
+      setImages(response.data.results);
     } catch (error) {
       console.error(error);
     }
+    fetchImages2();
   };
 
   //LLAMADO PARA ACTUALIZAR EL LLAMADO DE PALETAS Y TRAER MÁS PALETAS
-
+  // aquí lo mismo, llamo el llamado a la api, pero es como que aquí es más específico y seteo lo que quiero mostrar.
   const handleMoreColorsClick = async () => {
     //volvemos a usar el services, donde ya tenemos el llamado.
     const palettesData = await fetchPalettes();
-    setPalettes(palettesData);
+    setPalettes(palettesData.data.colors);
   };
-  // const handleMoreColorsClick = async () => {
-  //   const randomHex = Math.floor(Math.random() * 16777215).toString(16);
-  //   //de nuevo vuelvo a llamar a la api para que me dé otros colores para que se inspire el cliente.
-  //   const result = await axios(
-  //     `https://www.thecolorapi.com/scheme?format=json&count=6&scheme=analogic&hex=${randomHex}`
-  //   );
-  //   console.log(palettes);
-  //   setPalettes(result.data.colors);
-  // };
 
   return (
     <div>

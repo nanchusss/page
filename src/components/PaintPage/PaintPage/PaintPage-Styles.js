@@ -67,8 +67,8 @@ export const Btn = styled(Button)`
   margin-left: 10px;
   display: flex;
   justify-content: left;
-  font-size: 1.1rem; /* ajusta el tamaño de la fuente */
-  padding: 8px 12px; /* ajusta el padding para hacer el botón un poco más grande */
+  font-size: 1.1rem;
+  padding: 8px 12px;
 `;
 
 export const Container2 = styled.div`
