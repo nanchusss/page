@@ -17,18 +17,23 @@ export const Pasarela = styled(Carousel)`
 `;
 
 export const Subtitulo = styled.p`
-  font-size: 22px;
+  font-size: 42px;
+  margin-bottom: 150px;
+  border-radius: 5px;
+
+  background-color: rgba(188, 184, 184, 0.5);
 
   @media (max-width: 767px) {
-    font-size: 12px;
+    font-size: 22px;
+    margin-bottom: 0px;
   }
 `;
 
 export const Titulo = styled.h2`
-  font-size: 40px;
+  font-size: 72px;
 
   @media (max-width: 767px) {
-    font-size: 22px;
+    font-size: 32px;
   }
 `;
 
