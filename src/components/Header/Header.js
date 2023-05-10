@@ -33,7 +33,7 @@ const Header = ({ handleLogin, handleShowQuizz }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <NavLinks className="mr-auto mt-3">
-          <Nav.Link stylee={styles.link} href="/" className="pl-3">
+          <Nav.Link stylee={styles.link} href="/">
             Inicio
           </Nav.Link>
           <Nav.Link style={styles.link} href="/inspiration">
