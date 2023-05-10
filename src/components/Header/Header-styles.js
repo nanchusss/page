@@ -33,6 +33,7 @@ export const Logo = styled.img`
 `;
 
 export const NavbarContainer = styled(Navbar)`
+  padding-right: 20px;
   width: 100%;
   height: 120px; // Ajuste la altura para acomodar los botones
   position: fixed;
@@ -48,12 +49,22 @@ export const NavLinks = styled(Nav)`
   margin-right: 10%;
   flex-grow: 1;
   justify-content: center;
+  @media (max-width: 767px) {
+    margin-top: 80px;
+    margin-left: 190px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
 `;
 
 export const ButtonsHeader = styled.div`
   position: absolute;
   top: 25px; // Ajuste el valor de posición superior
   right: 10px; // Ajuste el valor de posición derecha
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 export const ButtonsHeader2 = styled.div`
   position: absolute;
@@ -62,6 +73,9 @@ export const ButtonsHeader2 = styled.div`
   display: flex;
   top: 25px; // Ajuste el valor de posición superior
   right: 50px; // Ajuste el valor de posición derecha
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 export const styles = {
   link: {

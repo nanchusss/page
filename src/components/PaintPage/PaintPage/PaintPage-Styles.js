@@ -6,6 +6,9 @@ export const StyledHeader = styled.header`
   background-color: #fff;
   padding: 20px;
   margin-bottom: 60px;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -14,6 +17,24 @@ export const StyledImage = styled.img`
   margin-left: 80px;
   object-fit: cover; /* o cover, dependiendo de lo que necesites */
   border-radius: 3px;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+`;
+export const StyledContainer = styled.div`
+  display: grid;
+
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 0;
+  @media only screen and (max-width: 768px) {
+    justify-items: center;
+  }
 `;
 
 export const Fondo = styled.div`
@@ -33,7 +54,7 @@ export const StyledTitle = styled.h1`
   );
   @media only screen and (max-width: 768px) {
     font-size: 30px;
-    margin-top: 40px;
+    margin-top: 10px;
     padding: 15px;
     text-align: center;
   }

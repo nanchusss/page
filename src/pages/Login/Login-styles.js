@@ -15,7 +15,13 @@ export const ContainerForm = styled.form`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
+
+  @media (max-width: 767px) {
+    min-width: 100%;
+    text-align: center;
+  }
 `;
+
 export const style = {
   img: {
     width: "322px",

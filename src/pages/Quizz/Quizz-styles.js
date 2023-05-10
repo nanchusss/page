@@ -14,6 +14,9 @@ export const QuizCard = styled(Card)`
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  @media (max-width: 767px) {
+    margin-top: 150px;
+  }
 `;
 export const Formy = styled(Form)`
   margin-top: 70px;

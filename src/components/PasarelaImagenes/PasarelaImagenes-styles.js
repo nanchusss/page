@@ -1,21 +1,48 @@
 import styled from "styled-components";
+import Carousel from "react-bootstrap/Carousel";
 
-export const Subtitulo = styled.div`
-  font-size: 38px;
-  margin-bottom: 40px;
+export const Pasarela = styled(Carousel)`
+  @media (max-width: 767px) {
+    .carousel-item img {
+      max-height: 300px;
+      object-fit: cover;
+    }
 
-  @media (max-width: 768px) {
-    font-size: 18px;
-    margin-bottom: 0px;
+    .carousel-caption {
+      bottom: 10%;
+      left: 10%;
+      right: 10%;
+    }
   }
 `;
 
-export const Titulo = styled.div`
-  font-size: 70px;
+export const Subtitulo = styled.p`
+  font-size: 22px;
 
-  @media (max-width: 768px) {
-    font-size: 28px;
-    margin-top: 40px;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+`;
+
+export const Titulo = styled.h2`
+  font-size: 40px;
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+`;
+
+export const Imagen = styled.img`
+  max-height: 700px;
+  max-width: 100%;
+  max-height: 500px; /* establecemos una altura máxima de 500px */
+  object-fit: cover;
+  height: auto;
+  margin-top: 50px;
+  object-position: center;
+
+  @media (max-width: 767px) {
+    height: 300px;
   }
 `;
 
@@ -24,5 +51,10 @@ export const styles = {
     maxHeight: "700px",
     objectFit: "cover",
     objectPosition: "top",
+
+    "@media (maxWidth: 767px)": {
+      maxHeight: "400px",
+      objectPosition: "top",
+    },
   },
 };

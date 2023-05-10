@@ -67,7 +67,7 @@ const Router = () => {
   }
 
   if (alreadyLogged === true || state === true) {
-    console.log("ya está loggeado", alreadyLogged);
+    console.log("ya está loggeado", alreadyLogged, "y el estado es", state);
     console.log("holis, el areadylogged es true y le dieron click a la card");
     return (
       <>

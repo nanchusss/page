@@ -45,11 +45,12 @@ const PaintPage = () => {
       <StyledHeader>
         <Container>
           <Row>
-            <Col xs={6}>
+            <Col xs={12} md={6}>
               <StyledImage src={Image2} alt="Logo" />
             </Col>
             <Col
-              xs={6}
+              xs={12}
+              md={6}
               className="d-flex justify-content-center align-items-center"
             >
               <Btn onClick={handleShowQuizz}>Cotiza Online!</Btn>

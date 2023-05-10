@@ -2,15 +2,14 @@ import Carousel from "react-bootstrap/Carousel";
 import CarouselItem1 from "../PasarelaImagenes/Images/Pincel.jpg";
 import CarouselItem2 from "../PasarelaImagenes/Images/interior.jpg";
 import CarouselItem3 from "../PasarelaImagenes/Images/mujer.jpg";
-import { Subtitulo, Titulo, styles } from "./PasarelaImagenes-styles";
+import { Imagen, Pasarela, Subtitulo, Titulo } from "./PasarelaImagenes-styles";
 
 function PasarelaImagenes() {
   return (
-    <Carousel fade>
+    <Pasarela fade>
       <Carousel.Item>
-        <img
+        <Imagen
           className="d-block w-100"
-          style={styles.img}
           src={CarouselItem1}
           alt="First slide"
         />
@@ -23,8 +22,7 @@ function PasarelaImagenes() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          style={styles.img}
+        <Imagen
           className="d-block w-100"
           src={CarouselItem3}
           alt="Second slide"
@@ -36,8 +34,7 @@ function PasarelaImagenes() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          style={styles.img}
+        <Imagen
           className="d-block w-100"
           src={CarouselItem2}
           alt="Third slide"
@@ -50,7 +47,7 @@ function PasarelaImagenes() {
           </Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
-    </Carousel>
+    </Pasarela>
   );
 }
 

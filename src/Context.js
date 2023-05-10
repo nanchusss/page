@@ -33,6 +33,7 @@ const MyProvider = ({ children }) => {
 
   const handleSetAlreadyLogged = () => {
     console.log("seteando alreaday logged para manejar el renderizado");
+    console.log("already logged es", alreadyLogged);
     setAlreadyLogged(true);
     console.log(alreadyLogged);
   };

@@ -52,7 +52,7 @@ const Header = ({ handleLogin, handleShowQuizz }) => {
                 </Nav.Item>
                 <Button
                   variant="danger"
-                  className="ml-2 m-4"
+                  className="ml-2 m-4 s-1"
                   onClick={handleLogout}
                 >
                   Cerrar sesión

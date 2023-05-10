@@ -44,6 +44,10 @@ const Login = () => {
     // Llamando a las funciones pasadas como props
     handleSubmit();
     handleSetAlreadyLogged();
+    console.log(
+      "dentro del login y seteando el estado de alreaday logged supuestamente como true",
+      alreadyLogged
+    );
   };
 
   return (

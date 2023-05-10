@@ -14,6 +14,7 @@ export const StyledFormContainer = styled.div`
 
   @media (max-width: 768px) {
     width: 80%;
+    margin-top: 120px;
   }
 `;
 
