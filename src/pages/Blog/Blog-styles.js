@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { Card, Modal } from "react-bootstrap";
 
 export const BlogContainer = styled.div`
+  margin-top: 100px;
   padding-top: 20px;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 `;
 

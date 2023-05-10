@@ -30,6 +30,9 @@ export const Logo = styled.img`
   &:hover {
     transform: rotateX(360deg);
   }
+  @media (max-width: 767px) {
+    left: 0px;
+  }
 `;
 
 export const NavbarContainer = styled(Navbar)`
@@ -53,8 +56,9 @@ export const NavLinks = styled(Nav)`
     margin-top: 80px;
     margin-left: 190px;
     display: flex;
+    border-radius: 4px;
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(250, 247, 247, 0.755);
   }
 `;
 
