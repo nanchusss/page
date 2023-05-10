@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Carousel from "react-bootstrap/Carousel";
 
 export const Pasarela = styled(Carousel)`
+  margin-top: 100px;
   @media (max-width: 767px) {
+    margin-top: 30px;
     .carousel-item img {
       max-height: 300px;
       object-fit: cover;
@@ -18,10 +20,10 @@ export const Pasarela = styled(Carousel)`
 
 export const Subtitulo = styled.p`
   font-size: 42px;
-  margin-bottom: 150px;
+
   border-radius: 5px;
 
-  background-color: rgba(188, 184, 184, 0.5);
+  background-color: rgba(188, 184, 184, 0.4);
 
   @media (max-width: 767px) {
     font-size: 22px;
