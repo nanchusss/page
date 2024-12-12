@@ -39,7 +39,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://www.finestracat.com",
+  "homepage": "https://github.com/nanchusss/finestracat",
   "eslintConfig": {
     "extends": [
       "react-app",
