@@ -46,7 +46,7 @@ const Group = () => {
             handleCardClick({
               image: GroupImage1,
               title: "Instal·ladors professionals al teu servei",
-              text: "Transforma la teva llar en un espai de confort amb els instal·ladors professionals de FinestraCat. El nostre servei d'instal·lació d'obertures d'alumini t'ofereix la qualitat i l'atenció que mereixes per donar vida als teus espais.",
+              text: "Transforma la teva llar en un espai de confort amb els instal·ladors professionals de FinestraCat. El nostre servei d'instal·lació d'obertures d'alumini i PVCGI t'ofereix la qualitat i l'atenció que mereixes per donar vida als teus espais.",
             })
           }
         >
@@ -69,7 +69,7 @@ const Group = () => {
             handleCardClick({
               image: GroupImage2,
               title: "Més de 30 anys d'experiència",
-              text: "Amb més de 30 anys d'experiència en la fabricació i instal·lació d'obertures d'alumini, a FinestraCat estem orgullosos d'haver portat qualitat i atenció als nostres serveis a llars i negocis de tot el territori. Confia en la nostra trajectòria i permet-nos fer realitat els teus projectes amb el més alt nivell d'excel·lència.",
+              text: "Amb més de 30 anys d'experiència en la fabricació i instal·lació d'obertures d'alumini i PVC, a FinestraCat estem orgullosos d'haver portat qualitat i atenció als nostres serveis a llars i negocis de tot el territori. Confia en la nostra trajectòria i permet-nos fer realitat els teus projectes amb el més alt nivell d'excel·lència.",
             })
           }
         >
