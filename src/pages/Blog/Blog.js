@@ -23,7 +23,7 @@ const Blog = () => {
       try {
         const response = await axios.get(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=${encodeURIComponent(
-            "westwing españa OR westing español OR interior diseño colorido OR diseño interiores"
+            "Arquitectura moderna OR diseño interiores moderno"
           )}&key=${API_KEY}`
         );
         setVideos(response.data.items);

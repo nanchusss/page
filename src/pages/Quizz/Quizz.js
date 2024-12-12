@@ -58,6 +58,7 @@ const Quiz = () => {
       nombreCliente,
     };
     console.log(data);
+
     setPresupuestos(...data);
     console.log(presupuesto);
   };
@@ -67,12 +68,12 @@ const Quiz = () => {
       {page === 1 && (
         <QuizCard>
           <Card.Body>
-            <Title>¿Qué desea pintar?</Title>
+            <Title>¿Com podem ajudar-te?</Title>
             <OptionButton
               variant="primary"
-              onClick={() => handleOptionSelect("Pintar Casa o Piso")}
+              onClick={() => handleOptionSelect("Instalar o comprar")}
             >
-              Pintar Casa o Piso
+              Compra + Instal.lació
             </OptionButton>
             <OptionButton
               variant="primary"
@@ -80,13 +81,7 @@ const Quiz = () => {
                 handleOptionSelect("Pintar Local Comercial/Garage")
               }
             >
-              Pintar Local Comercial/Garage
-            </OptionButton>
-            <OptionButton
-              variant="primary"
-              onClick={() => handleOptionSelect("Pintar Oficina")}
-            >
-              Pintar Oficina
+              Instal.lació
             </OptionButton>
           </Card.Body>
         </QuizCard>
@@ -95,7 +90,7 @@ const Quiz = () => {
         <QuizCard>
           <Card.Body>
             <Title>
-              Perfecto! Ayudanos a asesorarte mejor. Cuál es tu nombre?
+              Perfecte! Ajuda'ns a assessorar-te millor. Quin es el teu nom?
             </Title>
             <Formy onSubmit={() => handleOptionSelect(nombreCliente)}>
               <Form.Group>
@@ -130,24 +125,21 @@ const Quiz = () => {
       {page === 3 && (
         <QuizCard>
           <Card.Body>
-            <Title>¿En qué estado se encuentran las paredes?</Title>
+            <Title>
+              {" "}
+              Perfecte {nombreCliente}! Necessites retirar obra antiga?
+            </Title>
             <OptionButton
               variant="primary"
               onClick={() => handleOptionSelect("En perfecto estado")}
             >
-              En perfecto estado
+              No, es una obra nova.
             </OptionButton>
             <OptionButton
               variant="primary"
               onClick={() => handleOptionSelect("Necesitan pequeños")}
             >
-              Necesitan arreglos pequeños (raspaduras, faltantes pequeños)
-            </OptionButton>
-            <OptionButton
-              variant="primary"
-              onClick={() => handleOptionSelect("Necesitan arreglos varios")}
-            >
-              Necesitan mejoras (faltantes, muchas raspaduras)
+              Si, necessito retirar abertures antigues
             </OptionButton>
           </Card.Body>
         </QuizCard>
@@ -155,18 +147,24 @@ const Quiz = () => {
       {page === 4 && (
         <QuizCard>
           <Card.Body>
-            <Title>¿Deseas incluir techos?</Title>
+            <Title>¿T'interessa Alumini o PVC?</Title>
             <OptionButton
               variant="primary"
-              onClick={() => handleOptionSelect("Incluir techos")}
+              onClick={() => handleOptionSelect("Alumini")}
             >
-              Incluir techos
+              Alumini
             </OptionButton>
             <OptionButton
               variant="primary"
-              onClick={() => handleOptionSelect("No incluir techos")}
+              onClick={() => handleOptionSelect("pvc")}
             >
-              No incluir techos
+              PVC
+            </OptionButton>
+            <OptionButton
+              variant="primary"
+              onClick={() => handleOptionSelect("No estic decidit")}
+            >
+              Necessito assessorament
             </OptionButton>
           </Card.Body>
         </QuizCard>
@@ -175,14 +173,14 @@ const Quiz = () => {
         <QuizCard>
           <Card.Body>
             <Title>
-              Perfecto {nombreCliente}! Deja un número telefónico para que te
-              contactemos:
+              Perfecte {nombreCliente}! Ens deixes un número de telèfon per
+              poder contactar-te?
             </Title>
             <Formy onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Control
                   type="text"
-                  placeholder="Ingresa tu número telefónico"
+                  placeholder="Ingressa el teu teléfon"
                   value={numeroTelefono}
                   onChange={handlenumeroTelefonoChange}
                 />

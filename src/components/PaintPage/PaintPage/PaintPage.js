@@ -19,11 +19,11 @@ import {
   CustomCardText,
 } from "./PaintPage-Styles";
 import { Container, Row, Col } from "react-bootstrap";
-import Image2 from "..//..//PaintPage/PaintPage/images/mujer.jpg";
-import ofrecer1 from "..//PaintPage/images/ofrecer1.svg";
-import ofrecer2 from "..//PaintPage/images/klipartz.com-_50_.svg";
-import ofrecer3 from "..//PaintPage/images/ofrecer3.svg";
-import ofrecer4 from "..//PaintPage/images/ofrecer4.svg";
+import Image2 from "..//..//PaintPage/PaintPage/images/pareja presupuesto.jpg";
+import ofrecer1 from "..//PaintPage/images/ofrecer1.png";
+import ofrecer2 from "..//PaintPage/images/ofrecer2.png";
+import ofrecer3 from "..//PaintPage/images/ofrecer3.png";
+import ofrecer4 from "..//PaintPage/images/ofrecer4.png";
 import pensamosenti1 from "..//PaintPage/images/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.jpg";
 import pensamosenti2 from "..//PaintPage/images/blog.jpg";
 import pensamosenti3 from "..//PaintPage/images/contact.jpg";
@@ -53,7 +53,7 @@ const PaintPage = () => {
               md={6}
               className="d-flex justify-content-center align-items-center"
             >
-              <Btn onClick={handleShowQuizz}>Cotiza Online!</Btn>
+              <Btn onClick={handleShowQuizz}>Cotitza Online!</Btn>
             </Col>
           </Row>
         </Container>
@@ -62,78 +62,60 @@ const PaintPage = () => {
         <Container>
           <Row>
             <Col>
-              <StyledTitle>¿Necesitas pintar tu casa o negocio?</StyledTitle>
+              <StyledTitle>
+                Necessites renovar les abertures del teu llar?
+              </StyledTitle>
               <StyledSubtitle>
-                ¡Contáctanos y solicita tu cotización ahora mismo!
+                Contactans i sol.licita el teu pressupost
               </StyledSubtitle>
             </Col>
           </Row>
         </Container>
       </Fondo>
       <StyledButton variant="primary" onClick={handleShowQuizz}>
-        Solicitar cotización
+        Inicia
       </StyledButton>
       <Container2>
-        <Title>Qué podemos ofrecerte?</Title>
+        <Title>Que t'oferim?</Title>
         <Grid>
           <GridItem>
             <Image src={ofrecer1} />
-            <StyledSubtitle>
-              Servicio de pintado de casas, pisos, techos y paredes
-            </StyledSubtitle>
+            <StyledSubtitle>Abertures de alumini i PVC</StyledSubtitle>
           </GridItem>
           <GridItem>
             <Image src={ofrecer2} />
-            <StyledSubtitle>
-              Servicio de pintado de comercios, locales, restaurantes y hoteles
-            </StyledSubtitle>
+            <StyledSubtitle>Instalació d'abertures</StyledSubtitle>
           </GridItem>
           <GridItem>
             <Image src={ofrecer3} />
-            <StyledSubtitle>
-              Servicio de pintado de oficinas y otras instalaciones
-            </StyledSubtitle>
+            <StyledSubtitle>Dissenys personalitzats</StyledSubtitle>
           </GridItem>
           <GridItem>
             <Image src={ofrecer4} />
-            <StyledSubtitle>
-              Pinturas decorativas y artísticas para los espacios, vinilos y
-              mucho más!
-            </StyledSubtitle>
+            <StyledSubtitle>Cotització sense cap cost</StyledSubtitle>
           </GridItem>
         </Grid>
       </Container2>
       <ContainerSection>
         <Container>
-          <Title>Porque pensamos en tí</Title>
+          <Title>Per que pensem en tu</Title>
           <Row>
-            <Col md={4}>
-              <CustomCard onClick={handleState} state={state}>
-                <CustomCardImg variant="top" src={pensamosenti1} />
-                <CustomCardTitle>Inspírate!</CustomCardTitle>
-                <CustomCardText>
-                  Explora nuestra sección de Inspírate para obtener imagenes de
-                  interiores novedosos y llenos de energía.
-                </CustomCardText>
-              </CustomCard>
-            </Col>
             <Col md={4}>
               <CustomCard onClick={handleShowBlog}>
                 <CustomCardImg variant="top" src={pensamosenti2} />
                 <CustomCardTitle>Blog</CustomCardTitle>
                 <CustomCardText>
-                  Novedades, artículos, consejos y mucho más para que le saques
-                  partido a tus renovaciones.
+                  Novetats, articles, consells i molt més per a tu.
                 </CustomCardText>
               </CustomCard>
             </Col>
             <Col md={4}>
               <CustomCard onClick={handleShowForm}>
                 <CustomCardImg variant="top" src={pensamosenti3} />
-                <CustomCardTitle>Contacta con nosotros</CustomCardTitle>
+                <CustomCardTitle>Contacta amb nosaltres</CustomCardTitle>
                 <CustomCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Deixa les teves dades i ens comunicarem amb tu lo més aviat
+                  possible.
                 </CustomCardText>
               </CustomCard>
             </Col>

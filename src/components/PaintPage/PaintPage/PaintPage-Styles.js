@@ -72,11 +72,13 @@ export const StyledSubtitle = styled.p`
 `;
 
 export const StyledButton = styled(Button)`
-  margin-top: 40px;
+  margin-top: 28px;
+  background-color: #3498db;
+  border-color: #3498db;
   min-width: 300px;
   min-height: 50px;
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 
   margin-left: auto;
   margin-right: auto;
@@ -90,6 +92,8 @@ export const Btn = styled(Button)`
   justify-content: left;
   font-size: 1.1rem;
   padding: 8px 12px;
+  background-color: #3498db;
+  border-color: #3498db;
 `;
 
 export const Container2 = styled.div`
@@ -108,6 +112,7 @@ export const Container2 = styled.div`
 
 export const Title = styled.h1`
   text-transform: uppercase;
+  margin-top: 20px;
   padding: 20px;
   font-weight: bold;
   font-size: 30px;
@@ -125,6 +130,7 @@ export const Grid = styled.div`
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   margin-top: 20px;
+  margin-bottom: 20px;
 
   @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;

@@ -47,7 +47,7 @@ export const NavbarContainer = styled(Navbar)`
 `;
 
 export const NavLinks = styled(Nav)`
-  font-size: 22px;
+  font-size: 32px;
   margin-left: 10%;
   margin-right: 10%;
   flex-grow: 1;

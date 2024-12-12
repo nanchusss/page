@@ -9,7 +9,7 @@ import {
   ButtonsHeader,
   ButtonsHeader2,
 } from "./Header-styles";
-import LogoMarca from "..//.//../Images/White and Blue Minimalist Clean Modern Technology Logo (4) (1).jpg";
+import LogoMarca from "..//.//../Images/Logo.jpeg";
 
 const Header = ({ handleLogin, handleShowQuizz }) => {
   //isLoggedIn posee la info de mail
@@ -34,46 +34,20 @@ const Header = ({ handleLogin, handleShowQuizz }) => {
       <Navbar.Collapse id="basic-navbar-nav">
         <NavLinks className="mr-auto mt-3 ">
           <Nav.Link style={styles.link} href="/" className="ml-2">
-            Inicio
+            Inici
           </Nav.Link>
-          <Nav.Link style={styles.link} href="/inspiration">
-            Inspírate
-          </Nav.Link>
+
           <Nav.Link style={styles.link} href="/blog">
             Blog
           </Nav.Link>
+          <Nav.Link style={styles.link} href="/" className="ml-2">
+            Contacte
+          </Nav.Link>
         </NavLinks>
         <Nav>
-          {isLoggedIn ? (
-            <>
-              <ButtonsHeader2>
-                <Nav.Item>
-                  <Nav.Link className="mr-2 m-4">{isLoggedIn}</Nav.Link>
-                </Nav.Item>
-                <Button
-                  variant="danger"
-                  className="ml-2 m-4 s-1"
-                  onClick={handleLogout}
-                >
-                  Cerrar sesión
-                </Button>
-              </ButtonsHeader2>
-            </>
-          ) : (
-            <ButtonsHeader>
-              <Button variant="primary" className="m-3" onClick={handleLogin}>
-                Iniciar sesión
-              </Button>
-
-              <Button
-                variant="success"
-                className="m-3"
-                onClick={handleShowQuizz}
-              >
-                Solicitar cotización
-              </Button>
-            </ButtonsHeader>
-          )}
+          <Button variant="success" className="m-3" onClick={handleShowQuizz}>
+            Sol.licitar cotització
+          </Button>
         </Nav>
       </Navbar.Collapse>
     </NavbarContainer>

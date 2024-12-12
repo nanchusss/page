@@ -6,37 +6,31 @@ import {
 } from "./Contacto-styles";
 import { Form } from "react-bootstrap";
 import { useState } from "react";
+// import emailjs from "emailjs-com"; // eslint-disable-line no-unused-vars
 
 const ContactForm = () => {
-  //guardado de todos los contactos, un objeto por cada contacto
   const [infoContact, setInfoContact] = useState([]);
-  //nombre y un estado por cada elemento a guardar.
   const [nombreCliente, setNombreCliente] = useState("");
-
   const [correoCliente, setCorreoCliente] = useState("");
   const [telefonoCliente, setTelefonoCliente] = useState("");
   const [mensajeCliente, setMensajeCliente] = useState("");
 
   const handleNombre = (e) => {
     setNombreCliente(e.target.value);
-    console.log(nombreCliente);
   };
 
   const handleCorreo = (e) => {
     setCorreoCliente(e.target.value);
-    console.log(correoCliente);
   };
 
   const handleTelefono = (e) => {
     setTelefonoCliente(e.target.value);
-    console.log("y el telefono esss", telefonoCliente);
   };
 
   const handleMensaje = (e) => {
     setMensajeCliente(e.target.value);
-    console.log("mostrando mensaje:", mensajeCliente);
   };
-  //el submit nos trae la info al objeto contacto, y después agregamos cada objeto a nuestro array Info...
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const contacto = {
@@ -46,20 +40,38 @@ const ContactForm = () => {
       mensaje: mensajeCliente,
     };
     setInfoContact([...infoContact, contacto]);
-    console.log(infoContact);
-    //dejamos los estados vacíos para volver a usarlos.
     setNombreCliente("");
     setCorreoCliente("");
     setTelefonoCliente("");
     setMensajeCliente("");
+
+    alert("Mensaje Enviado ;)");
+
+    // // Envío de email
+    // const templateParams = {
+    //   from_name: nombreCliente,
+    //   from_email: correoCliente,
+    //   to_name: "cruzdelsur.pintura@gmail.com",
+    //   message_html: mensajeCliente,
+    //   phone: telefonoCliente,
+    // };
+    // emailjs
+    //   .send("default_service", "template_id", templateParams)
+
+    //   .then((response) => {
+    //     console.log("SUCCESS!", response.status, response.text);
+    //   })
+    //   .catch((error) => {
+    //     console.log("FAILED...", error);
+    //   });
   };
 
   return (
     <StyledFormContainer>
-      <StyledFormTitle>Contacta con nosotros</StyledFormTitle>
+      <StyledFormTitle>Contacta amb nosaltres</StyledFormTitle>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicName">
-          <Form.Label>Nombre</Form.Label>
+          <Form.Label>Nom</Form.Label>
           <StyledFormControl
             type="text"
             placeholder="Introduce tu nombre"
@@ -69,7 +81,7 @@ const ContactForm = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Correo electrónico</Form.Label>
+          <Form.Label>Correu electrònic</Form.Label>
           <StyledFormControl
             type="email"
             placeholder="Introduce tu correo electrónico"
@@ -79,7 +91,7 @@ const ContactForm = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicPhone">
-          <Form.Label>Teléfono</Form.Label>
+          <Form.Label>Telèfon</Form.Label>
           <StyledFormControl
             type="text"
             placeholder="Introduce tu teléfono"
@@ -89,7 +101,7 @@ const ContactForm = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicMessage">
-          <Form.Label>Mensaje</Form.Label>
+          <Form.Label>Missatge</Form.Label>
           <StyledFormControl
             style={{ width: "100%", borderRadius: "5px" }}
             as="textarea"

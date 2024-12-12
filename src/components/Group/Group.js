@@ -9,12 +9,20 @@ import {
 } from "./Group-styles";
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaintRoller } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRotateBack,
+  faHouseChimneyWindow,
+  faManatSign,
+  faPaintRoller,
+  faUser,
+  faUserTie,
+  faWindowMaximize,
+} from "@fortawesome/free-solid-svg-icons";
 import { faAward } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-bootstrap/Modal";
-import GroupImage1 from "../Group/Imagenes/Optimized-capataz-joven-pie-atras-ropa-trabajo-naranja-casco-amarillo-usando-rodillo-pintura-nuevo-apartamento-trabajo.jpg";
-import GroupImage2 from "../Group/Imagenes/estrellas.jpg";
-import GroupImage3 from "../Group/Imagenes/cientecolores.jpg";
+import GroupImage1 from "../Group/Imagenes/detalle.jpeg";
+import GroupImage2 from "../Group/Imagenes/interior vivienda.jpeg";
+import GroupImage3 from "../Group/Imagenes/perfil detalle.jpeg";
 
 const Group = () => {
   // Estado para manejar la visibilidad del modal
@@ -37,21 +45,22 @@ const Group = () => {
           onClick={() =>
             handleCardClick({
               image: GroupImage1,
-              title: "Pintores profesionales a tu servicio",
-              text: "Transforma tu hogar en un oasis de color con los pintores profesionales de Cruz del Sur. Nuestro proyecto de servicio de pintura te ofrece la calidad y el cuidado que mereces para dar vida a tus espacios.",
+              title: "Instal·ladors professionals al teu servei",
+              text: "Transforma la teva llar en un espai de confort amb els instal·ladors professionals de FinestraCat. El nostre servei d'instal·lació d'obertures d'alumini t'ofereix la qualitat i l'atenció que mereixes per donar vida als teus espais.",
             })
           }
         >
           <Card.Body>
-            <FontAwesomeIcon icon={faPaintRoller} size="2xl" />
+            <FontAwesomeIcon icon={faUser} size="2xl" />
             <Card.Title style={{ fontWeight: "600", fontSize: "16px" }}>
-              Pintores Profesionales
+              Instal·ladors professionals
             </Card.Title>
+
             <Card.Link
               href="#"
               style={{ textDecoration: "none", color: "#585858" }}
             >
-              Ver más
+              Veure més
             </Card.Link>
           </Card.Body>
         </StyledCard>
@@ -59,21 +68,21 @@ const Group = () => {
           onClick={() =>
             handleCardClick({
               image: GroupImage2,
-              title: "Experiencia de más de una década",
-              text: "Con más de una década de experiencia en el mercado, en Cruz del Sur estamos orgullosos de haber llevado la calidad y el cuidado en nuestros servicios de pintura a hogares y negocios en todo el país. Confía en nuestra trayectoria y permítenos hacer realidad tus proyectos de pintura con el más alto nivel de excelencia.",
+              title: "Més de 30 anys d'experiència",
+              text: "Amb més de 30 anys d'experiència en la fabricació i instal·lació d'obertures d'alumini, a FinestraCat estem orgullosos d'haver portat qualitat i atenció als nostres serveis a llars i negocis de tot el territori. Confia en la nostra trajectòria i permet-nos fer realitat els teus projectes amb el més alt nivell d'excel·lència.",
             })
           }
         >
           <Card.Body>
             <FontAwesomeIcon icon={faAward} size="2xl" />
             <Card.Title style={{ fontWeight: "600", fontSize: "16px" }}>
-              Experiencia de más de 10 años
+              Experiència de més de 30 anys
             </Card.Title>
             <Card.Link
               href="#"
               style={{ textDecoration: "none", color: "#585858" }}
             >
-              Ver más
+              Veure més
             </Card.Link>
           </Card.Body>
         </StyledCard>
@@ -81,21 +90,21 @@ const Group = () => {
           onClick={() =>
             handleCardClick({
               image: GroupImage3,
-              title: "Soluciones personalizadas",
-              text: "En Cruz del Sur, entendemos que cada proyecto es único y por eso ofrecemos soluciones personalizadas que se adaptan a tus necesidades específicas. Confía en nosotros para hacer realidad tus ideas con excelencia y profesionalismo.",
+              title: "Solucions personalitzades",
+              text: "A FinestraCat, entenem que cada projecte és únic, i per això oferim solucions personalitzades que s'adapten a les teves necessitats específiques. Confia en nosaltres per fer realitat les teves idees amb excel·lència i professionalitat.",
             })
           }
         >
           <Card.Body>
-            <FontAwesomeIcon icon={faPaintRoller} size="2xl" />
+            <FontAwesomeIcon icon={faHouseChimneyWindow} size="2xl" />
             <Card.Title style={{ fontWeight: "600", fontSize: "16px" }}>
-              Proyectos Personalizados y adaptados a tus necesidades
+              Solucions personalitzades
             </Card.Title>
             <Card.Link
               href="#"
               style={{ textDecoration: "none", color: "#585858" }}
             >
-              Ver más
+              Veure més
             </Card.Link>
           </Card.Body>
         </StyledCard>

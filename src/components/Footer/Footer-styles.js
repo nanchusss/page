@@ -12,7 +12,12 @@ export const FooterCard = styled(Card)`
 `;
 
 export const FooterTitle = styled(Card.Title)`
+  margin-top: 18px;
+  text-align: center;
+`;
+export const FooterTitle2 = styled(Card.Title)`
   margin-top: 5px;
+  font-size: 35px;
   text-align: center;
 `;
 

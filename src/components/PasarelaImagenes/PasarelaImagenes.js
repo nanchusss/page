@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
-import CarouselItem1 from "../PasarelaImagenes/Images/Pincel.jpg";
-import CarouselItem2 from "../PasarelaImagenes/Images/interior.jpg";
-import CarouselItem3 from "../PasarelaImagenes/Images/mujer.jpg";
+import CarouselItem1 from "../PasarelaImagenes/Images/interior1.webp";
+import CarouselItem2 from "../PasarelaImagenes/Images/interior2.webp";
+import CarouselItem3 from "../PasarelaImagenes/Images/interior3.webp";
 import { Imagen, Pasarela, Subtitulo, Titulo } from "./PasarelaImagenes-styles";
 
 function PasarelaImagenes() {
@@ -14,11 +14,8 @@ function PasarelaImagenes() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <Titulo>Quieres renovar tu casa?</Titulo>
-          <Subtitulo>
-            {" "}
-            Pintura profesional para obras y empresas en Barcelona.
-          </Subtitulo>
+          <Titulo>Vols renovar la teva llar?</Titulo>
+          <Subtitulo> A Finestracat som al teu servei</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -29,8 +26,8 @@ function PasarelaImagenes() {
         />
 
         <Carousel.Caption>
-          <Titulo>Cruz del Sur</Titulo>
-          <Subtitulo>"Colores que inspiran, calidad que perdura"</Subtitulo>
+          <Titulo>Finestracat</Titulo>
+          <Subtitulo>"La millor oferta"</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -41,10 +38,8 @@ function PasarelaImagenes() {
         />
 
         <Carousel.Caption>
-          <Titulo>Inspírate y crea</Titulo>
-          <Subtitulo>
-            Dale vida a tus proyectos con los colores de Cruz del Sur.
-          </Subtitulo>
+          <Titulo>Inspirat i crea</Titulo>
+          <Subtitulo>Donali vida a la teva casa amb Finestracat</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
     </Pasarela>
