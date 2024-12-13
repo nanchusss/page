@@ -53,7 +53,7 @@ const PaintPage = () => {
               md={6}
               className="d-flex justify-content-center align-items-center"
             >
-              <Btn onClick={handleShowQuizz}>Cotitza Online!</Btn>
+              <Btn onClick={handleShowQuizz}>Pressupost Online!</Btn>
             </Col>
           </Row>
         </Container>
@@ -63,7 +63,7 @@ const PaintPage = () => {
           <Row>
             <Col>
               <StyledTitle>
-                Necessites renovar les abertures del teu llar?
+                Necessites renovar les abertures de la teva llar?
               </StyledTitle>
               <StyledSubtitle>
                 Contactans i sol.licita el teu pressupost
@@ -80,11 +80,11 @@ const PaintPage = () => {
         <Grid>
           <GridItem>
             <Image src={ofrecer1} />
-            <StyledSubtitle>Abertures de alumini i PVC</StyledSubtitle>
+            <StyledSubtitle>Obertures de alumini i PVC</StyledSubtitle>
           </GridItem>
           <GridItem>
             <Image src={ofrecer2} />
-            <StyledSubtitle>Instalació d'abertures</StyledSubtitle>
+            <StyledSubtitle>Instal.lació d'obertures</StyledSubtitle>
           </GridItem>
           <GridItem>
             <Image src={ofrecer3} />
@@ -92,13 +92,13 @@ const PaintPage = () => {
           </GridItem>
           <GridItem>
             <Image src={ofrecer4} />
-            <StyledSubtitle>Cotització sense cap cost</StyledSubtitle>
+            <StyledSubtitle>Pressupost sense cap compromís</StyledSubtitle>
           </GridItem>
         </Grid>
       </Container2>
       <ContainerSection>
         <Container>
-          <Title>Per que pensem en tu</Title>
+          <Title>Perquè pensem en tu</Title>
           <Row>
             <Col md={4}>
               <CustomCard onClick={handleShowBlog}>

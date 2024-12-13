@@ -46,7 +46,7 @@ const Header = ({ handleLogin, handleShowQuizz }) => {
         </NavLinks>
         <Nav>
           <Button variant="success" className="m-3" onClick={handleShowQuizz}>
-            Sol.licitar cotització
+            Sol.licitar pressupost
           </Button>
         </Nav>
       </Navbar.Collapse>

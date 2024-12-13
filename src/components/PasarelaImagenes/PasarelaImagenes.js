@@ -14,8 +14,8 @@ function PasarelaImagenes() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <Titulo>Vols renovar la teva llar?</Titulo>
-          <Subtitulo> A Finestracat som al teu servei</Subtitulo>
+          <Titulo>Vols renovar el teu llar?</Titulo>
+          <Subtitulo> A FINESTRACAT som al teu servei</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -26,7 +26,7 @@ function PasarelaImagenes() {
         />
 
         <Carousel.Caption>
-          <Titulo>Finestracat</Titulo>
+          <Titulo>FINESTRACAT</Titulo>
           <Subtitulo>"La millor oferta"</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
@@ -38,8 +38,8 @@ function PasarelaImagenes() {
         />
 
         <Carousel.Caption>
-          <Titulo>Inspirat i crea</Titulo>
-          <Subtitulo>Donali vida a la teva casa amb Finestracat</Subtitulo>
+          <Titulo>Inspira't i crea</Titulo>
+          <Subtitulo>Dona-li vida a la teva casa amb FINESTRACAT</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
     </Pasarela>

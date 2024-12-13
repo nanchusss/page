@@ -46,7 +46,7 @@ const Group = () => {
             handleCardClick({
               image: GroupImage1,
               title: "Instal·ladors professionals al teu servei",
-              text: "Transforma la teva llar en un espai de confort amb els instal·ladors professionals de FinestraCat. El nostre servei d'instal·lació d'obertures d'alumini i PVCGI t'ofereix la qualitat i l'atenció que mereixes per donar vida als teus espais.",
+              text: "Transforma la teva llar en un espai de confort amb els instal·ladors professionals de FinestraCat. El nostre servei d'instal·lació d'obertures d'alumini i PVC t'ofereix la qualitat i l'atenció que mereixes per donar vida als teus espais.",
             })
           }
         >
