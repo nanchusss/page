@@ -8,62 +8,61 @@ import { Form } from "react-bootstrap";
 import { useState } from "react";
 // import emailjs from "emailjs-com"; // eslint-disable-line no-unused-vars
 
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import {
+  StyledFormContainer,
+  StyledFormControl,
+  StyledFormTitle,
+  StyledFormButton,
+} from "./Contacto-styles";
+import { Form } from "react-bootstrap";
+
 const ContactForm = () => {
-  const [infoContact, setInfoContact] = useState([]);
   const [nombreCliente, setNombreCliente] = useState("");
   const [correoCliente, setCorreoCliente] = useState("");
   const [telefonoCliente, setTelefonoCliente] = useState("");
   const [mensajeCliente, setMensajeCliente] = useState("");
 
-  const handleNombre = (e) => {
-    setNombreCliente(e.target.value);
-  };
-
-  const handleCorreo = (e) => {
-    setCorreoCliente(e.target.value);
-  };
-
-  const handleTelefono = (e) => {
-    setTelefonoCliente(e.target.value);
-  };
-
-  const handleMensaje = (e) => {
-    setMensajeCliente(e.target.value);
-  };
+  const handleNombre = (e) => setNombreCliente(e.target.value);
+  const handleCorreo = (e) => setCorreoCliente(e.target.value);
+  const handleTelefono = (e) => setTelefonoCliente(e.target.value);
+  const handleMensaje = (e) => setMensajeCliente(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const contacto = {
-      nombre: nombreCliente,
-      correo: correoCliente,
-      telefono: telefonoCliente,
-      mensaje: mensajeCliente,
+
+    const templateParams = {
+      from_name: nombreCliente,
+      from_email: correoCliente,
+      to_name: "finestracat@gmail.com", // El correo que configuraste
+      message_html: mensajeCliente,
+      phone: telefonoCliente,
     };
-    setInfoContact([...infoContact, contacto]);
+
+    emailjs
+      .send(
+        "service_tvcr0xt", // Tu Service ID
+        "template_toouger", // Tu Template ID (lo encuentras en EmailJS)
+        templateParams,
+        "4LolALoB0S8PkKs-u" // Tu User ID (lo encuentras en la sección "Integrations")
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Mensaje enviado correctamente.");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          alert("Error al enviar el mensaje. Inténtalo más tarde.");
+        }
+      );
+
+    // Limpia los campos del formulario
     setNombreCliente("");
     setCorreoCliente("");
     setTelefonoCliente("");
     setMensajeCliente("");
-
-    alert("Mensaje Enviado ;)");
-
-    // // Envío de email
-    // const templateParams = {
-    //   from_name: nombreCliente,
-    //   from_email: correoCliente,
-    //   to_name: "cruzdelsur.pintura@gmail.com",
-    //   message_html: mensajeCliente,
-    //   phone: telefonoCliente,
-    // };
-    // emailjs
-    //   .send("default_service", "template_id", templateParams)
-
-    //   .then((response) => {
-    //     console.log("SUCCESS!", response.status, response.text);
-    //   })
-    //   .catch((error) => {
-    //     console.log("FAILED...", error);
-    //   });
   };
 
   return (
