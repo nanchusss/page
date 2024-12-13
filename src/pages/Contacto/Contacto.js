@@ -1,13 +1,3 @@
-import {
-  StyledFormContainer,
-  StyledFormControl,
-  StyledFormTitle,
-  StyledFormButton,
-} from "./Contacto-styles";
-import { Form } from "react-bootstrap";
-import { useState } from "react";
-// import emailjs from "emailjs-com"; // eslint-disable-line no-unused-vars
-
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import {

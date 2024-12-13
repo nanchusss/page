@@ -20,9 +20,9 @@
     "nodemailer": "^6.9.1",
     "path-browserify": "^1.0.1",
     "popper.js": "^1.16.1",
-    "react": "^19.0.0",
+    "react": "^18.3.1",
     "react-bootstrap": "^2.10.6",
-    "react-dom": "^19.0.0",
+    "react-dom": "^18.3.1",
     "react-redux": "^8.0.5",
     "react-responsive-modal": "^6.4.1",
     "react-router-dom": "^6.10.0",
@@ -36,6 +36,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "copy-index": "cp public/index.html ./",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -59,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "cp-cli": "^2.0.0",
     "gh-pages": "^6.2.0",
     "webpack": "^5.82.1"
   }

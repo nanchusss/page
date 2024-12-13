@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/static/js/main.4c260c89.js",
+    "static/media/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.jpg": "/static/media/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.5d23a4c5dd74111dc9be.jpg",
+    "static/media/pareja presupuesto.jpg": "/static/media/pareja presupuesto.8d1bcb5e571e98d8356a.jpg",
+    "static/media/interior3.webp": "/static/media/interior3.620037973b63465700af.webp",
+    "static/media/interior2.webp": "/static/media/interior2.7e85a7f6ac2fe32b0ef4.webp",
+    "static/media/interior1.webp": "/static/media/interior1.61022d1aad1786949a5b.webp",
+    "static/media/blog.jpg": "/static/media/blog.bfe20fcbadaf76443116.jpg",
+    "static/media/contact.jpg": "/static/media/contact.8029a108f2c9bbf0b475.jpg",
+    "static/media/interior vivienda.jpeg": "/static/media/interior vivienda.d460ac1f75a97099c78b.jpeg",
+    "static/media/detalle.jpeg": "/static/media/detalle.75fbcecabb1ae0af7bc9.jpeg",
+    "static/media/ofrecer4.png": "/static/media/ofrecer4.341708124cf0b2fe744e.png",
+    "static/media/ofrecer3.png": "/static/media/ofrecer3.8ac17ac4a4e5bca8c606.png",
+    "static/media/perfil detalle.jpeg": "/static/media/perfil detalle.eb88d6bfcccb63234436.jpeg",
+    "static/media/ofrecer2.png": "/static/media/ofrecer2.2f52832f5f9f53010cef.png",
+    "static/media/Logo.jpeg": "/static/media/Logo.a1b445fd4bec939eeb8e.jpeg",
+    "static/media/ofrecer1.png": "/static/media/ofrecer1.e849064891bb42a22640.png",
+    "index.html": "/index.html",
+    "main.4c260c89.js.map": "/static/js/main.4c260c89.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4c260c89.js"
+  ]
+}
