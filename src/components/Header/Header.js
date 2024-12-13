@@ -6,8 +6,8 @@ import {
   Logo,
   NavLinks,
   styles,
-  ButtonsHeader,
-  ButtonsHeader2,
+  //ButtonsHeader,
+  //ButtonsHeader2,
 } from "./Header-styles";
 import LogoMarca from "..//.//../Images/Logo.jpeg";
 

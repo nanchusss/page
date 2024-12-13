@@ -24,7 +24,7 @@ import ofrecer1 from "..//PaintPage/images/ofrecer1.png";
 import ofrecer2 from "..//PaintPage/images/ofrecer2.png";
 import ofrecer3 from "..//PaintPage/images/ofrecer3.png";
 import ofrecer4 from "..//PaintPage/images/ofrecer4.png";
-import pensamosenti1 from "..//PaintPage/images/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.jpg";
+//import pensamosenti1 from "..//PaintPage/images/diseno-interiores-sala-estar-moderna-mediados-siglo-arbol-monstera.jpg";
 import pensamosenti2 from "..//PaintPage/images/blog.jpg";
 import pensamosenti3 from "..//PaintPage/images/contact.jpg";
 import { useContext } from "react";

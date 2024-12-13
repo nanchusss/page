@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Card, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 export const BlogContainer = styled.div`
   padding-top: 20px;

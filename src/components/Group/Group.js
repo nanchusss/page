@@ -10,13 +10,13 @@ import {
 import Card from "react-bootstrap/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowRotateBack,
+  //faArrowRotateBack,
   faHouseChimneyWindow,
-  faManatSign,
-  faPaintRoller,
+  //faManatSign,
+  //faPaintRoller,
   faUser,
-  faUserTie,
-  faWindowMaximize,
+  //faUserTie,
+  //faWindowMaximize,
 } from "@fortawesome/free-solid-svg-icons";
 import { faAward } from "@fortawesome/free-solid-svg-icons";
 import Modal from "react-bootstrap/Modal";
